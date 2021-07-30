@@ -1,0 +1,31 @@
+:root {
+    --header-color: #1e2731;
+    --primary-color: #2275c9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--header-color);
+}
+
+header h1 {
+    padding: 20px 35px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+/* Header END */
