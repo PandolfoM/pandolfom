@@ -11,21 +11,59 @@
 
 /* Header */
 header {
+    padding: 20px 35px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     background-color: var(--header-color);
 }
 
 header h1 {
-    padding: 20px 35px;
-}
-
-header ul {
-    list-style: none;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
 }
 
 header a {
     text-decoration: none;
     color: var(--primary-color);
 }
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    border-bottom: var(--primary-color) 3px solid;
+    padding: 0 10px;
+    margin: 0 5px;
+    font-weight: lighter;
+    font-size: 26px;
+}
 /* Header END */
+
+/* Hero */
+.hero {
+    background-image: url("../img/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-name {
+    flex: 0 1 auto;
+    line-height: 1.2;
+    font-size: 18px;
+}
+/* Hero END */
