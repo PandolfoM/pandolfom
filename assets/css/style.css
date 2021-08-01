@@ -2,6 +2,7 @@
     --header-color: #31343c;
     --primary-color: #485873;
     --secondary-color: #70a8b7;
+    --third-color: #232b38;
 }
 
 * {
@@ -79,6 +80,7 @@ header nav ul li a {
     padding: 10px;
     margin: 0 50px 25px 0;
     background-color: var(--secondary-color);
+    color: var(--third-color);
     font-size: 25px;
 }
 /* Hero END */
@@ -102,9 +104,10 @@ header nav ul li a {
     align-items: flex-start;
     text-align: right;
     font-size: 40px;
-    padding: 0 20px 120px 0;
+    padding: 0 43px 120px 0;
     margin-right: 20px;
     border-right: var(--primary-color) 5px solid;
+    color: var(--primary-color);
 }
 
 .about-me-text {
@@ -114,22 +117,52 @@ header nav ul li a {
     color: var(--primary-color);
 }
 
-.work h3{
-    align-items: flex-start;
-    text-align: right;
-    font-size: 40px;
-    padding: 0 36px 500px 0;
-    margin-right: 20px;
-    border-right: var(--primary-color) 5px solid;
+.my-work {
+    padding-bottom: 30px;
 }
 
-.work-box {
-    flex: 1;
-    flex-wrap: wrap;
-    text-align: left;
+.work h3 {
+    text-align: right;
+    font-size: 40px;
+    padding: 0 59px 500px 0px;
+    margin-right: 20px;
+    border-right: var(--primary-color) 5px solid;
     color: var(--primary-color);
 }
+
 /* Content END */
+
+/* Footer */
+.contact-me h3 {
+    text-align: right;
+    font-size: 40px;
+    padding: 0 10px 0 0;
+    margin-right: 20px;
+    border-right: var(--primary-color) 5px solid;
+    color: var(--primary-color);
+}
+.contact-info a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--third-color);
+    padding: 5px;
+    margin: 20px;
+    border-bottom: var(--primary-color) 5px solid;
+}
+
+.contact-info ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.contact-info {
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer END */
 
 /* Utilities */
     .flex {
