@@ -157,10 +157,39 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
 .work h3 {
     text-align: right;
     font-size: 40px;
-    padding: 0 59px 500px 0px;
+    padding: 0 59px 700px 0px;
     margin-right: 20px;
     border-right: var(--primary-color) 5px solid;
     color: var(--primary-color);
+}
+
+.photo-gallery {
+    display: inline;
+}
+
+.photos {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.photo-1 {
+    object-fit: cover;
+    width: 99%;
+    height: 300px;
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--secondary-color);
+}
+
+.photos-main {
+    object-fit: cover;
+    width: 49%;
+    height: 200px;
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--secondary-color);
+    /* border: var(--secondary-color) 5px solid; */
 }
 
 /* Content END */
