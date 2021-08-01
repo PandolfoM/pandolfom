@@ -162,12 +162,9 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
     border-right: var(--primary-color) 5px solid;
     color: var(--primary-color);
 }
-
-.photo-gallery {
-    display: inline;
-}
-
 .photos {
+    position: relative;
+    text-align: left;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
@@ -189,7 +186,102 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
     margin: 5px;
     padding: 5px;
     background-color: var(--secondary-color);
-    /* border: var(--secondary-color) 5px solid; */
+}
+
+.photo-1:hover {
+    opacity: 0.7;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.photos-main:hover {
+    opacity: 0.7;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.photo-text {
+    color: var(--third-color);
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 140px;
+    left: 10px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+}
+
+.photo-text span {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.photo-text-2 {
+    color: var(--third-color);
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 380px;
+    left: 10px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+}
+
+.photo-text-2 span {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.photo-text-3 {
+    color: var(--third-color);
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 380px;
+    left: 680px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+}
+
+.photo-text-3 span {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.photo-text-4 {
+    color: var(--third-color);
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 590px;
+    left: 10px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+}
+
+.photo-text-4 span {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.photo-text-5 {
+    color: var(--third-color);
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 590px;
+    left: 680px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+}
+
+.photo-text-5 span {
+    font-size: 13px;
+    font-weight: normal;
 }
 
 /* Content END */
@@ -276,6 +368,17 @@ footer ul {
 /* Utilities END */
 
 /* Media Queries */
+
+/* 1500 px */
+@media screen and (max-width: 1500px) {
+    .photo-1 {
+        width: 100%;
+    }
+    
+    .photos-main {
+        width: 100%;
+    }
+}
 
 /* 1024 px */
 @media screen and (max-width: 1024px) {
