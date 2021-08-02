@@ -175,20 +175,19 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
 .photo-gallery {
     display: flex;
     flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
-    justify-content: flex-start;
 } 
 
-.image-1 {
-    width: 1000px;
-    height: 200px;
-    padding: 5px;
-}
 
 .image {
-    width: 500px;
+    width: 600px;
     height: 200px;
     padding: 5px;
+    margin: 5px;
+    background-color: var(--secondary-color);
 }
 
 .image:hover, .image-1:hover {
