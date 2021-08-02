@@ -162,6 +162,7 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
     border-right: var(--primary-color) 5px solid;
     color: var(--primary-color);
 }
+
 .photos {
     position: relative;
     text-align: left;
@@ -181,6 +182,16 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
 
 .photos-main {
     object-fit: cover;
+    width: 49%;
+    height: 200px;
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--secondary-color);
+}
+
+.photos-runbuddy {
+    object-fit: cover;
+    position: relative;
     width: 49%;
     height: 200px;
     margin: 5px;
@@ -236,22 +247,6 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
     font-weight: normal;
 }
 
-.photo-text-3 {
-    color: var(--third-color);
-    font-size: 20px;
-    font-weight: bold;
-    position: absolute;
-    top: 380px;
-    left: 680px;
-    padding: 10px;
-    background-color: var(--secondary-color);
-}
-
-.photo-text-3 span {
-    font-size: 13px;
-    font-weight: normal;
-}
-
 .photo-text-4 {
     color: var(--third-color);
     font-size: 20px;
@@ -264,22 +259,6 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
 }
 
 .photo-text-4 span {
-    font-size: 13px;
-    font-weight: normal;
-}
-
-.photo-text-5 {
-    color: var(--third-color);
-    font-size: 20px;
-    font-weight: bold;
-    position: absolute;
-    top: 590px;
-    left: 680px;
-    padding: 10px;
-    background-color: var(--secondary-color);
-}
-
-.photo-text-5 span {
     font-size: 13px;
     font-weight: normal;
 }
