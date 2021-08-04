@@ -8,7 +8,7 @@ A website that showcases some of my capabilities.
 * CSS
 
 ## Site Preview
-![Preview](assets\img\page.png)
+![Preview](assets/img/page.png)
 
 ## Website
 https://pandolfom.github.io/pandolfom/
