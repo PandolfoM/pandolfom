@@ -71,8 +71,6 @@ header nav ul li a {
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
 }
 
 header nav ul li a:before {
@@ -135,8 +133,8 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
 /* Main Content */
 
 .main-section {
-  margin: 50px auto;
-  width: 80%;
+  margin: 30px auto;
+  width: 90%;
   flex-wrap: wrap;
   flex-direction: column;
 }
@@ -152,9 +150,7 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
   align-items: flex-start;
   text-align: right;
   font-size: 40px;
-  padding: 0 43px 120px 0;
-  margin-right: 20px;
-  border-right: var(--primary-color) 5px solid;
+  padding-right: 40px;
   color: var(--primary-color);
 }
 
@@ -162,15 +158,15 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
   flex: 1;
   flex-wrap: wrap;
   text-align: left;
+  padding: 5px 20px;
   color: var(--primary-color);
+  border-left: var(--primary-color) 5px solid;
 }
 
 .work h3 {
   text-align: right;
   font-size: 40px;
-  padding: 0 59px 700px 0px;
-  margin-right: 20px;
-  border-right: var(--primary-color) 5px solid;
+  padding-right: 56px;
   color: var(--primary-color);
 }
 
@@ -183,6 +179,8 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+  border-left: var(--primary-color) 5px solid;
+  margin-bottom: 30px;
 }
 
 .photo-gallery a img{
@@ -194,6 +192,7 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
   margin: 10px;
   max-width: 100%;
   height: 250px;
+  object-fit: cover;
 }
 
 .photo-gallery img:hover {
@@ -206,16 +205,13 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin-left: 10%;
 }
 
 footer h3 {
   padding-bottom: 100px;
   text-align: right;
   font-size: 40px;
-  padding: 0 10px 0 0;
-  margin-right: 20px;
-  border-right: var(--primary-color) 5px solid;
+  padding: 0 7px 0 0;
   color: var(--primary-color);
 }
 
@@ -223,12 +219,10 @@ footer ul li a {
   text-decoration: none;
   color: var(--third-color);
   margin: 0 50px;
-  border-bottom: var(--primary-color) 5px solid;
-  vertical-align: middle;
+  border-bottom: var(--primary-color) 3px solid;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -267,13 +261,20 @@ footer ul li a:hover:before, footer ul li a:focus:before, footer ul li a:active:
 
 footer ul {
   width: 100%;
+  padding: 20px 0;
+  border-left: var(--primary-color) 5px solid;
   height: auto;
   font-weight: bold;
-  font-size: 1.55vw;
+  font-size: 30px;
   display: flex;
   flex: 1;
   flex-wrap: wrap;
   list-style-type: none;
+}
+
+footer ul li {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Footer END */
@@ -287,108 +288,93 @@ footer ul {
 /* Utilities END */
 
 /* Media Queries */
-
-/* 1024 px */
+@media screen and (max-width: 1050px) {
+  .photo-gallery img{
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   footer ul {
-    font-size: 20px;
-  }
-  .about-me h3 {
-    padding-bottom: 270px;
-  }
-}
-
-/* 980 px */
-
-@media screen and (max-width: 980px) {
-  footer ul {
-    font-size: 20px;
-  }
-}
-
-/* 768 px */
-
-@media screen and (max-width: 768px) {
-  header nav ul li a {
-    font-size: 20px;
-  }
-  .about-me h3 {
-    padding-bottom: 420px;
-  }
-  footer li {
-    padding-bottom: 10px;
-  }
-}
-
-/* 414 px */
-
-@media screen and (max-width: 540px) {
-  header h1 {
-    font-size: 20px;
-  }
-  header nav ul li a {
     font-size: 12px;
   }
+}
+
+@media screen and (max-width: 500px) {
   .hero-name {
-    font-size: 12px;
+    font-size: 15px;
   }
-  .about-me h3 {
-    font-size: 20px;
-    padding: 0 28px 350px 0;
-  }
+
   .about-me-text {
-    font-size: 10px;
+    font-size: 12px;
   }
-  .work h3 {
-    font-size: 20px;
-    padding: 0 36px 500px 0px;
+
+  header h1 {
+    font-size: 25px;
   }
-  footer h3 {
-    font-size: 20px;
+
+  header nav ul {
+    font-size: 15px;
+    justify-content: flex-start;
   }
-  footer ul {
-    font-size: 10px;
+
+  header nav ul li a{
+    margin: 20px;
+    font-size: 15px;
   }
-  footer a {
-    border-width: 2px;
-  }
-  footer li {
-    padding-bottom: 5px;
+
+  header nav ul li{
+    padding: 5px;
+    font-size: 15px;
   }
 }
 
-/* 360 px */
-
-@media screen and (max-width: 360px) {
-  .about-me h3 {
-    padding: 0 28px 430px 0;
-  }
+@media screen and (max-width: 375px) {
   .hero-name {
     font-size: 10px;
   }
-}
 
-/* 320 px */
-
-@media screen and (max-width: 320px) {
-  .about-me h3 {
-    padding: 0 28px 480px 0;
+  
+  footer h3 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
   }
+
   footer ul {
-    font-size: 8px;
+    padding: 10px 0;
+    border-top: var(--primary-color) 5px solid;
+    border-left: 0;
+  }
+
+  footer ul li {
+   margin: auto;
+  }
+
+  footer ul li a{
+    margin: 3px;
+    text-align: center;
   }
 }
 
-/* 320 px */
+@media screen and (max-width: 785px) {
+  .main-section {
+    margin: 10px auto;
+  }
 
-@media screen and (max-width: 280px) {
   .about-me h3 {
-    padding-bottom: 710px;
+    font-size: 25px;
+    padding-right: 45px;
   }
-  footer ul {
-    font-size: 8px;
+
+  .work h3 {
+    font-size: 25px;
+  }
+  
+  footer h3 {
+    font-size: 25px;
+    padding-right: 25px;
   }
 }
-
 /* Media Queries END */
