@@ -94,11 +94,15 @@ header nav ul li a:before {
   transition-timing-function: ease-out;
 }
 
-header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active {
+header nav ul li a:hover,
+header nav ul li a:focus,
+header nav ul li a:active {
   color: white;
 }
 
-header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul li a:active:before {
+header nav ul li a:hover:before,
+header nav ul li a:focus:before,
+header nav ul li a:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
@@ -186,7 +190,7 @@ header nav ul li a:hover:before, header nav ul li a:focus:before, header nav ul 
   text-decoration: none;
 }
 
-.runBuddy{
+.runBuddy {
   width: 760px;
 }
 
@@ -254,11 +258,15 @@ footer ul li a:before {
   transition-timing-function: ease-out;
 }
 
-footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
+footer ul li a:hover,
+footer ul li a:focus,
+footer ul li a:active {
   color: white;
 }
 
-footer ul li a:hover:before, footer ul li a:focus:before, footer ul li a:active:before {
+footer ul li a:hover:before,
+footer ul li a:focus:before,
+footer ul li a:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
@@ -293,7 +301,7 @@ footer ul li {
 
 /* Media Queries */
 @media screen and (max-width: 1050px) {
-  .photo-gallery img{
+  .photo-gallery img {
     width: 100%;
   }
 }
@@ -322,12 +330,12 @@ footer ul li {
     justify-content: flex-start;
   }
 
-  header nav ul li a{
+  header nav ul li a {
     margin: 20px;
     font-size: 15px;
   }
 
-  header nav ul li{
+  header nav ul li {
     padding: 5px;
     font-size: 15px;
   }
@@ -338,7 +346,6 @@ footer ul li {
     font-size: 10px;
   }
 
-  
   footer h3 {
     width: 100%;
     padding: 0;
@@ -353,10 +360,10 @@ footer ul li {
   }
 
   footer ul li {
-   margin: auto;
+    margin: auto;
   }
 
-  footer ul li a{
+  footer ul li a {
     margin: 3px;
     text-align: center;
   }
@@ -375,7 +382,7 @@ footer ul li {
   .work h3 {
     font-size: 25px;
   }
-  
+
   footer h3 {
     font-size: 25px;
     padding-right: 25px;
