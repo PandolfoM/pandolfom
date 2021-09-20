@@ -4,113 +4,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Portfolio - Matthew</title>
 </head>
 
 <body>
-  <!-- Header with Navigation -->
-  <header>
-    <h1>Portfolio</h1>
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <strong>Portfolio</strong>
+        <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+  
+        <a class="navbar-item">
+          About
+        </a>
+  
+        <a class="navbar-item">
+          Work
+        </a>
 
-    <nav>
-      <ul>
-        <li>
-          <a href="#about-me">About Me</a>
-        </li>
-        <li>
-          <a href="#work">Work</a>
-        </li>
-        <li>
-          <a href="#contact">Contact Me</a>
-        </li>
-        <li>
-          <a href="/">Resume</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-name">
-      <h2>Matthew Pandolfo</h2>
+        <a class="navbar-item">
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav> 
+  <section class="hero is-fullheight">
+    <img src="./assets/img/hero.jpg" alt="">
+    <div class="container hero-body">
+      <div class="hero-content has-text-centered">
+        <figure class="container image is-128x128 ">
+          <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+        </figure>
+        <p class="title">
+          Matthew Pandolfo
+        </p>
+        <p class="subtitle">
+          Full Stack Web Developer
+        </p>
+      </div>
     </div>
   </section>
-
-  <!-- Main Section -->
-  <section class="main-section flex">
-    <div class="content">
-      <!-- About Me Section -->
-      <div class="about">
-        <div id="about-me" class="about-me">
-          <h3>About <br>Me</h3>
-        </div>
-        <div class="about-me-text">
-          <p>
-            about me description about me description about me description about me description about me description
-            about me
-            description about me description about me description about me description about me description about me
-            description
-            about me description about me description about me description about me description about me description
-            about me
-            description about me description about me description about me description about me description about me
-            description
-            about me description about me description about me description about me description about me description
-            about me
-            description about me description about me description about me description about me description about me
-            description
-            about me description about me description
-          </p>
-        </div>
-      </div>
-      <!-- Work Showcase -->
-      <div class="my-work flex">
-        <div id="work" class="work">
-          <h3>Work</h3>
-        </div>
-        <div class="photo-gallery flex">
-          <div>
-            <a href="https://codemasterdev.github.io/Project-1/" target="_blank" title="Project 1">
-              <img class="surf-img" src="./assets/img/project1.jpg" alt="Project 1" />
-            </a>
-            <img src="./assets/img/led-bg.jpg" alt="" />
-          </div>
-          <div>
-            <a href="https://pandolfom.github.io/password-generator/" target="_blank" title="Password Generator">
-              <img src="./assets/img/passwordGen.png"  alt=""/>
-            </a>
-            <a href="https://pandolfom.github.io/coding-quiz/" target="_blank" title="Coding Quiz">
-              <img src="./assets/img/codingQuiz.png" alt="" />
-            </a>
-          </div>
-          <a href="https://pandolfom.github.io/run-buddy/" target="_blank" title="Run Buddy">
-            <img class="runBuddy" src="./assets/img/runBuddy-bg.JPG" alt="" />
-          </a>
-        </div>
-      </div>
-<!-- Footer -->
-      <footer>
-        <h3 id="contact">Contact<br> Me</h3>
-    
-        <ul>
-          <li>
-            <a href="tel:860-944-6334">860.944.6334</a>
-          </li>
-          <li>
-            <a href="mailto:matt@pandolfo.com">matt@pandolfo.com</a>
-          </li>
-          <li>
-            <a href="https://github.com/PandolfoM" target="_blank">GitHub</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/matthew-pandolfo-22b6b1192/" target="_blank">LinkedIn</a>
-          </li>
-        </ul>
-      </footer>
-
-    </div>
-  </section>  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
