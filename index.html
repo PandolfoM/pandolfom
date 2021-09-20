@@ -1,67 +1,125 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Portfolio - Matthew</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Portfolio - Matthew</title>
-</head>
-
-<body>
-  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <strong>Portfolio</strong>
-        <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
-      </a>
-  
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          Home
-        </a>
-  
-        <a class="navbar-item">
-          About
-        </a>
-  
-        <a class="navbar-item">
-          Work
+  <body>
+    <!-- Navigation -->
+    <nav
+      class="navbar is-transparent is-fixed-top"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <strong>Portfolio</strong>
+          <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
         </a>
 
-        <a class="navbar-item">
-          Contact
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
       </div>
-    </div>
-  </nav> 
-  <section class="hero is-fullheight">
-    <img src="./assets/img/hero.jpg" alt="">
-    <div class="container hero-body">
-      <div class="hero-content has-text-centered">
-        <figure class="container image is-128x128 ">
-          <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-        </figure>
-        <p class="title">
-          Matthew Pandolfo
-        </p>
-        <p class="subtitle">
-          Full Stack Web Developer
-        </p>
-      </div>
-    </div>
-  </section>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="./assets/js/script.js"></script>
-</body>
 
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#"> Home </a>
+
+          <a class="navbar-item" href="#about"> About </a>
+
+          <a class="navbar-item"> Work </a>
+
+          <a class="navbar-item"> Contact </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero -->
+    <section class="hero is-fullheight">
+      <div class="container hero-body">
+        <div class="hero-content has-text-centered">
+          <!-- Picture of me -->
+          <figure class="container image is-128x128">
+            <img
+              class="is-rounded"
+              src="https://bulma.io/images/placeholders/128x128.png"
+            />
+          </figure>
+          <p class="title">Matthew Pandolfo</p>
+          <p class="subtitle">Full Stack Web Developer</p>
+        </div>
+      </div>
+    </section>
+    <!-- About Me -->
+    <section>
+      <div class="columns mt-3 mb-3 is-vcentered">
+        <div class="is-half has-background-dark is-offset-one-quarter column">
+          <div class="columns">
+            <div class="column is-half p-5">
+              <i class="aboutIcon fas fa-code has-text-white"></i>
+            </div>
+            <div class="column p-5">
+              <h3 class="has-text-info has-text-weight-bold" id="about">
+                About Me
+              </h3>
+              <br />
+              <p class="has-text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                in laoreet arcu. Donec a tellus at nulla molestie porta
+                fermentum nec massa. Donec vitae dictum neque. In ac augue ac
+                risus suscipit consectetur. In ac risus in justo vulputate
+                luctus quis sit amet lorem. Integer at tristique mauris, nec
+                facilisis ex. Phasellus ac mollis nisi, sit amet sagittis nunc.
+                Pellentesque imperdiet lorem vitae vestibulum porttitor.
+                Curabitur non pharetra urna. Aenean posuere interdum diam a
+                tempor. Sed quis diam eu augue varius pulvinar. Nullam facilisis
+                urna lacus, suscipit egestas risus luctus a. Morbi sollicitudin
+                dui eget enim facilisis, suscipit pulvinar urna molestie. Morbi
+                malesuada justo a sapien tempus, vitae sodales ante rutrum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer has-background-dark">
+      <div class="columns">
+        <div class="column is-2 footerNav">
+          <a href="#">Home</a>
+          <a>About</a>
+          <a>Work</a>
+          <a>Contact</a>
+        </div>
+        <div class="column footerCopy">
+          <p>Created by Matthew Pandolfo &copy; 2021</p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

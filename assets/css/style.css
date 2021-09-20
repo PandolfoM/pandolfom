@@ -4,9 +4,22 @@
   box-sizing: border-box;
 }
 
+/* NAV */
+.navbar {
+  background-color: #333;
+}
+
+.navbar-item {
+  color: white;
+}
+/* NAV END*/
+
+
+/* Hero */
 .hero {
   position: relative;
   text-align: center;
+  background-color: #333;
 }
 
 .hero-body {
@@ -16,6 +29,55 @@
   transform: translate(-50%, -50%);
 }
 
-.title, .subtitle {
+.title {
   font-size: 2vw;
+  color: white;
+}
+
+.subtitle {
+  font-size: 1.2vw;
+  color: rgba(255, 255, 255, 0.5);
+}
+/* Hero END */
+
+/* About Me */
+.aboutIcon {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 10em;
+}
+/* About Me END */
+
+/* Footer */
+.footer {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* Footer END */
+
+/* Utilities */
+.footerBtn,a{
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footerBtn,a:hover {
+  color: hsl(204, 86%, 53%, 0.5);
+} 
+
+.footerNav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-left: 0;
+  margin-left: 200px;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.footerCopy {
+  padding-right: 0;
+  margin-right: 200px;
+  text-align: right;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
 }
