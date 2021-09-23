@@ -66,6 +66,24 @@
   color: hsl(204, 86%, 53%, 0.5);
 } 
 
+.footerSocial {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  justify-content: end;
+  padding: 12px 0;
+  margin-right: 200px;
+}
+
+.footerSocial,a {
+  padding-left: 12px; 
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footerSocial,a:hover {
+  color: hsl(204, 86%, 53%, 0.5);
+}
+
 .footerNav {
   display: flex;
   flex-wrap: nowrap;
