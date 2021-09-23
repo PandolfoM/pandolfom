@@ -12,6 +12,7 @@
 .navbar-item {
   color: white;
 }
+
 /* NAV END*/
 
 
@@ -54,9 +55,7 @@
 .footer {
   color: rgba(255, 255, 255, 0.5);
 }
-/* Footer END */
 
-/* Utilities */
 .footerBtn,a{
   text-align: left;
   color: rgba(255, 255, 255, 0.5);
@@ -99,3 +98,18 @@
   text-align: right;
   border-top: 2px solid rgba(255, 255, 255, 0.5);
 }
+/* Footer END */
+
+/* Work */
+.work-arrows {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+/* Work END*/
+
+/* Utilities */
+.header-text {
+  font-size: 20px;
+}
+/* Utilities END */
