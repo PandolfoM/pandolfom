@@ -3,6 +3,7 @@ const work = [
     title: "Coding Quiz",
     desc: "A simple 5 question quiz that tests your knowledge of JavaScript.",
     img: "./assets/img/codingQuiz.jpg",
+    imgPrev: "./assets/img/previews/imgPreview.jpeg",
     site: "https://pandolfom.github.io/coding-quiz/",
     repo: "https://github.com/PandolfoM/coding-quiz"
   },
@@ -25,6 +26,7 @@ const work = [
 let title = ['Coding Quiz', 'Note Taker', 'Emprise']
 let desc = ['A simple 5 question quiz that tests your knowledge of JavaScript.', 'A website that allows you to take notes and save them to a database to use for later.', 'A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast']
 let img = ['./assets/img/codingQuiz.jpg', './assets/img/noteTaker.jpg', './assets/img/emprise.jpg']
+let imgPrev = ['./assets/img/previews/imgPreview.jpeg', './assets/img/previews/img2Preview.jpeg', './assets/img/previews/img3Preview.jpeg']
 let site = ['https://pandolfom.github.io/coding-quiz/', 'https://salty-dawn-40447.herokuapp.com/', 'https://codemasterdev.github.io/Project-1/']
 let repo = ['https://github.com/PandolfoM/coding-quiz', 'https://github.com/PandolfoM/note-taker', 'https://github.com/codemasterdev/Project-1']
 
@@ -32,7 +34,7 @@ $(document).ready(function () {
   console.log(work)
   let workPage = 0;
   // Work Card Content
-  workPageContent(...title, ...desc, ...img, ...site, ...repo);
+  workPageContent(...title, ...desc, ...img, ...imgPrev, ...site, ...repo);
   // Check for click events on the navbar burger icon
   $(".navbar-burger").click(function () {
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
@@ -68,25 +70,43 @@ $(document).ready(function () {
       workPageContent(...title, ...desc, ...img, ...site, ...repo);    
     }
   });
+
+  $('.card1Img').click(function () { 
+    console.log(this.src)
+    `
+    <div class="modal">
+      <div class="modal-background"></div>
+        <div class="modal-content">
+          <p class="image is-4by3">
+            <img src="${this.src}" alt="">
+          </p>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    `
+  });
 });
 
-function workPageContent(title, title2, title3, desc, desc2, desc3, img, img2, img3, site, site2, site3, repo, repo2, repo3) {
+function workPageContent(title, title2, title3, desc, desc2, desc3, img, img2, img3, imgPrev, img2Prev, img3Prev, site, site2, site3, repo, repo2, repo3) {
   // card 1
   $(".card1Title").text(title);
   $(".card1Desc").text(desc);
   $('.btnSiteLink1').attr("href", site);
   $('.btnRepoLink1').attr("href", repo);
   $('.card1Img').attr("src", img);
+  $('.card1Imgpreview').attr("href", imgPrev);
   // card 2
   $(".card2Title").text(title2);
   $(".card2Desc").text(desc2);
   $('.btnSiteLink2').attr("href", site2);
   $('.btnRepoLink2').attr("href", repo2);
   $('.card2Img').attr("src", img2);
+  $('.card2Imgpreview').attr("href", img2Prev);
   // card 3
   $(".card3Title").text(title3);
   $(".card3Desc").text(desc3);
   $('.btnSiteLink3').attr("href", site3);
   $('.btnRepoLink3').attr("href", repo3);
   $('.card3Img').attr("src", img3);
+  $('.card3Imgpreview').attr("href", img3Prev);
 }

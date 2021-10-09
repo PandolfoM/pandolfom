@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Portfolio - Matthew</title>
   </head>
@@ -116,8 +117,9 @@
       <div class="workSection columns mb-3 is-vcentered">
         <div class="card is-offset-one-quarter column is-2 has-text-centered page1">
           <div class="card-image">
-            <figure class="">
-              <img class="card1Img" alt="Placeholder image" width="300">
+            <figure>
+              <a class="card1Imgpreview" data-lightbox="image-1"><img class="card1Img"></img></a>
+              <!-- <img class="card1Img" alt="Placeholder image" width="300"> -->
             </figure>
           </div>
           <div class="card-content">
@@ -134,7 +136,8 @@
         <div class="card column is-2 has-text-centered page1">
           <div class="card-image">
             <figure class="">
-              <img class="card2Img" alt="Placeholder image" width="300">
+              <a class="card2Imgpreview" data-lightbox="image-1"><img class="card2Img"></img></a>
+              <!-- <img class="card2Img" alt="Placeholder image" width="300"> -->
             </figure>
           </div>
           <div class="card-content">
@@ -150,8 +153,9 @@
         </div>
         <div class="card column is-2 has-text-centered page1">
           <div class="card-image">
-            <figure class="">
-              <img class="card3Img" alt="Placeholder image" height="300">
+            <figure>
+              <a class="card3Imgpreview" data-lightbox="image-1"><img class="card3Img"></img></a>
+              <!-- <img class="card3Img" alt="Placeholder image" height="300"> -->
             </figure>
           </div>
           <div class="card-content">
@@ -188,6 +192,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -195,4 +200,5 @@
     ></script>
     <script src="./assets/js/script.js"></script>
   </body>
-</html>
+  </html>
+  
