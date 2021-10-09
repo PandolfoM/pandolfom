@@ -106,6 +106,22 @@
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+
+.card1Desc {
+  height: 100px;
+  overflow-y: auto;
+  max-height: 100px;
+}
+.card2Desc {
+  height: 100px;
+  overflow-y: auto;
+  max-height: 100px;
+}
+.card3Desc {
+  height: 100px;
+  overflow-y: auto;
+  max-height: 100px;
+}
 /* Work END*/
 
 /* Utilities */
