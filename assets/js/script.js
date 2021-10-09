@@ -16,7 +16,9 @@ const work = [
   {
     title: "Emprise",
     desc: "A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast",
-    img: ""
+    img: "",
+    site: "https://codemasterdev.github.io/Project-1/",
+    repo: "https://github.com/codemasterdev/Project-1",
   }
 ]
 
@@ -51,7 +53,7 @@ $(document).ready(function () {
       workPage = 0;
     }
     if (workPage === 0) {
-      workPageContent(work[0].title, work[1].title, work[2].title, work[0].site);
+      workPageContent(work[0].title, work[1].title, work[2].title,   workPageContent("Coding Quiz", "Work Schedule", "Emprise", work[0].site, work[1].site, work[2].site, work[0].repo, work[1].repo, work[2].repo));
     }
   });
 });
@@ -67,5 +69,6 @@ function workPageContent(title, title2, title3, site, site2, site3, repo, repo2,
   $('.btnRepoLink2').attr("href", repo2);
   // card 3
   $(".card3Title").text(title3);
-
+  $('.btnSiteLink3').attr("href", site3);
+  $('.btnRepoLink3').attr("href", repo3);
 }
