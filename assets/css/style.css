@@ -4,6 +4,30 @@
   box-sizing: border-box;
 }
 
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(204, 86%, 53%, 1); 
+}
+/* Scrollbar END */
+
 /* NAV */
 .navbar {
   background-color: #333;
