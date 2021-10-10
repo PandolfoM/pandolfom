@@ -148,6 +148,17 @@
 }
 /* Work END*/
 
+/* Contact Info */
+.fa-linkedin-in {
+  float: right;
+  align-content: center;
+}
+
+.linkedInLink {
+  border: 3px rgb(32, 156, 238) solid;
+}
+/* Contact Info END*/
+
 /* Utilities */
 .header-text {
   font-size: 20px;

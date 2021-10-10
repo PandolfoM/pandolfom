@@ -1,28 +1,3 @@
-const work = [
-  {
-    title: "Coding Quiz",
-    desc: "A simple 5 question quiz that tests your knowledge of JavaScript.",
-    img: "./assets/img/codingQuiz.jpg",
-    imgPrev: "./assets/img/previews/imgPreview.jpeg",
-    site: "https://pandolfom.github.io/coding-quiz/",
-    repo: "https://github.com/PandolfoM/coding-quiz"
-  },
-  {
-    title: "Note Taker",
-    desc: "A website that allows you to take notes and save them to a database to use for later.",
-    img: "./assets/img/noteTaker.jpg",
-    site: "https://salty-dawn-40447.herokuapp.com/",
-    repo: "https://github.com/PandolfoM/note-taker"
-  },
-  {
-    title: "Emprise",
-    desc: "A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast",
-    img: "./assets/img/emprise.jpg",
-    site: "https://codemasterdev.github.io/Project-1/",
-    repo: "https://github.com/codemasterdev/Project-1",
-  }
-]
-
 let title = ['Coding Quiz', 'Note Taker', 'Emprise']
 let desc = ['A simple 5 question quiz that tests your knowledge of JavaScript.', 'A website that allows you to take notes and save them to a database to use for later.', 'A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast']
 let img = ['./assets/img/codingQuiz.jpg', './assets/img/noteTaker.jpg', './assets/img/emprise.jpg']
@@ -51,8 +26,11 @@ $(document).ready(function () {
       // Page 2 details
       let title = ['Title', 'Title2', 'Title3'];
       let desc = ['Desc1', 'Desc2', 'Desc3'];
-      let card3Title = 'Title';
-      workPageContent(...title, ...desc);
+      let img = ['']
+      let imgPrev = ['']
+      let site = ['']
+      let repo = ['']
+      workPageContent(...title, ...desc, ...img, ...imgPrev, ...site, ...repo);
     }
   });
 
