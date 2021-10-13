@@ -5,9 +5,9 @@
 }
 
 :root {
-  --main-color: #333;
-  --secondary-color: hsl(204, 86%, 53%, 1);
-  --secondary-color-transparent: hsl(204, 86%, 53%, 0.5);
+  --main-color: #12171d;
+  --secondary-color: #008ae6;
+  --secondary-color-transparent: rgba(0, 138, 230, 0.5);
 }
 
 /* Scrollbar */
@@ -24,13 +24,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: var(--main-color);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(204, 86%, 53%, 1);
+  background: var(--secondary-color);
 }
 /* Scrollbar END */
 
@@ -40,11 +40,11 @@
 #homeNav:hover,
 #workNav:hover,
 #contactNav:hover {
-  color: hsl(204, 86%, 53%, 0.5);
+  color: var(--secondary-color-transparent);
 }
 
 .navbar {
-  background-color: #333;
+  background-color: var(--main-color);
 }
 
 .navbar-item {
@@ -56,7 +56,7 @@
 .hero {
   position: relative;
   text-align: center;
-  background-color: #333;
+  background-color: var(--main-color);
 }
 
 .hero-body {
@@ -100,7 +100,7 @@ a {
 
 .footerBtn,
 a:hover {
-  color: hsl(204, 86%, 53%, 0.5);
+  color: var(--secondary-color-transparent);
 }
 
 .footerSocial {
@@ -120,7 +120,7 @@ a {
 
 .footerSocial,
 a:hover {
-  color: hsl(204, 86%, 53%, 0.5);
+  color: var(--secondary-color-transparent);
 }
 
 .footerNav {
@@ -166,7 +166,7 @@ a:hover {
 
 /* Contact Info */
 .border {
-  border: 3px rgb(32, 156, 238) solid;
+  border: 3px var(--secondary-color) solid;
 }
 
 .contact-info:hover {
@@ -180,7 +180,15 @@ a:hover {
 }
 
 .dark-text {
-  color: #333;
+  color: var(--main-color);
+}
+
+.main-background {
+  background-color: var(--main-color);
+}
+
+.text-color {
+  color: var(--secondary-color);
 }
 
 #workCard1,
