@@ -21,6 +21,7 @@ $(document).ready(function () {
     $("#contactNav").toggleClass("dark-text");
   });
 
+  // Navigate My Work
   $("#workBtnRight").click(function () {
     workPage++;
     if (workPage > 1) {
@@ -52,21 +53,7 @@ $(document).ready(function () {
       workPageContent(...title, ...desc, ...img, ...site, ...repo);    
     }
   });
-
-  $('.card1Img').click(function () { 
-    console.log(this.src)
-    `
-    <div class="modal">
-      <div class="modal-background"></div>
-        <div class="modal-content">
-          <p class="image is-4by3">
-            <img src="${this.src}" alt="">
-          </p>
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    `
-  });
+  // Navigate Work END
 });
 
 function workPageContent(title, title2, title3, desc, desc2, desc3, img, img2, img3, imgPrev, img2Prev, img3Prev, site, site2, site3, repo, repo2, repo3) {
