@@ -149,13 +149,12 @@
 /* Work END*/
 
 /* Contact Info */
-.fa-linkedin-in {
-  float: right;
-  align-content: center;
+.border {
+  border: 3px rgb(32, 156, 238) solid;
 }
 
-.linkedInLink {
-  border: 3px rgb(32, 156, 238) solid;
+.contact-info:hover {
+  color: unset;
 }
 /* Contact Info END*/
 
