@@ -6,6 +6,8 @@
 
 :root {
   --main-color: #12171d;
+  --main2-color: #151b22;
+  --card-color: #232a33;
   --secondary-color: #008ae6;
   --secondary-color-transparent: rgba(0, 138, 230, 0.5);
 }
@@ -85,7 +87,23 @@
   margin-top: 100px;
   font-size: 10em;
 }
+
+#about {
+  background-color: var(--main2-color);
+}
 /* About Me END */
+
+/* Work */
+#work {
+  background-color: var(--main-color);
+}
+/* Work END */
+
+/* Contact Info */
+#contactInfo {
+  background-color: var(--main2-color);
+}
+/* Contact Info END */
 
 /* Footer */
 .footer {
@@ -162,6 +180,16 @@ a:hover {
   overflow-y: auto;
   max-height: 100px;
 }
+
+.card1Img,
+.card2Img,
+.card3Img
+ {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border-radius: 5px;
+}
 /* Work END*/
 
 /* Contact Info */
@@ -169,8 +197,12 @@ a:hover {
   border: 3px var(--secondary-color) solid;
 }
 
+.contact-info{
+  color: white;
+}
+
 .contact-info:hover {
-  color: unset;
+  color: white;
 }
 /* Contact Info END*/
 
@@ -191,16 +223,22 @@ a:hover {
   color: var(--secondary-color);
 }
 
+.card-background {
+  background-color: var(--card-color);
+}
+
 #workCard1,
 #workCard2,
 #workCard3 {
   border-bottom: 3px solid transparent;
+  background-color: var(--card-color);
+  color: white;
 }
 
 #workCard1:hover,
 #workCard2:hover,
 #workCard3:hover {
-  border-bottom: 3px solid var(--secondary-color-transparent);
+  border-bottom: 3px solid var(--secondary-color);
 }
 /* Utilities END */
 
