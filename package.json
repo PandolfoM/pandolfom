@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/PandolfoM/pandolfom/issues"
   },
-  "homepage": "https://github.com/PandolfoM/pandolfom#readme"
+  "homepage": "https://github.com/PandolfoM/pandolfom#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
 }

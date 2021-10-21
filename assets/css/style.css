@@ -10,6 +10,7 @@
   --card-color: #232a33;
   --secondary-color: #008ae6;
   --secondary-color-transparent: rgba(0, 138, 230, 0.5);
+  --animate-delay: 0.5s;
 }
 
 /* Scrollbar */
@@ -42,7 +43,7 @@
 #homeNav:hover,
 #workNav:hover,
 #contactNav:hover {
-  color: var(--secondary-color-transparent);
+  color: var(--secondary-color);
 }
 
 .navbar {
@@ -68,7 +69,7 @@
   transform: translate(-50%, -50%);
 }
 
-.title {
+.nameTitle {
   font-size: 2vw;
   color: white;
 }
@@ -97,6 +98,13 @@
 #work {
   background-color: var(--main-color);
 }
+
+.card1Imgpreview,
+.card2Imgpreview,
+.card3Imgpreview
+{
+  padding: 0;
+}
 /* Work END */
 
 /* Contact Info */
@@ -118,7 +126,7 @@ a {
 
 .footerBtn,
 a:hover {
-  color: var(--secondary-color-transparent);
+  color: var(--secondary-color);
 }
 
 .footerSocial {
@@ -138,7 +146,7 @@ a {
 
 .footerSocial,
 a:hover {
-  color: var(--secondary-color-transparent);
+  color: var(--secondary-color);
 }
 
 .footerNav {
