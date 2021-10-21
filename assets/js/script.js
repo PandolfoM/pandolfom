@@ -56,9 +56,11 @@ $(document).ready(function () {
   // Navigate Work END
 
   // Animations
-  $('.nameTitle').toggleClass('animate__animated animate__fadeInLeft');
-  $('.subtitle').toggleClass('animate__animated animate__fadeInLeft animate__delay-1s');
+  $('.nameTitle').toggleClass('animate__animated animate__fadeInLeft animate__slow');
+  $('.subtitle').toggleClass('animate__animated animate__fadeInLeft animate__delay-1s animate__slow');
   $('.pfp').toggleClass('animate__animated animate__fadeIn animate__delay-3s animate__slow');
+
+  $('.navbar').toggleClass('animate__animated animate__fadeInLeft animate__slow');
   // Animations END
 });
 
