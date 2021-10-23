@@ -6,7 +6,6 @@ let site = ['https://pandolfom.github.io/coding-quiz/', 'https://salty-dawn-4044
 let repo = ['https://github.com/PandolfoM/coding-quiz', 'https://github.com/PandolfoM/note-taker', 'https://github.com/codemasterdev/Project-1']
 
 $(document).ready(function () {
-  console.log(work)
   let workPage = 0;
   // Work Card Content
   workPageContent(...title, ...desc, ...img, ...imgPrev, ...site, ...repo);
@@ -61,6 +60,25 @@ $(document).ready(function () {
   $('.pfp').toggleClass('animate__animated animate__fadeIn animate__delay-3s animate__slow');
 
   $('.navbar').toggleClass('animate__animated animate__fadeInLeft animate__slow');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        $('#workCard3').toggleClass('fadeLeft');
+        $('#workCard3').removeClass('transparent');
+        setTimeout(function() {
+          $('#workCard2').toggleClass('fadeLeft');
+          $('#workCard2').removeClass('transparent');
+        }, 200)
+        setTimeout(function() {
+          $('#workCard1').toggleClass('fadeLeft');
+          $('#workCard1').removeClass('transparent');
+        }, 300)
+      }
+    });
+  });
+  
+  observer.observe(document.querySelector('#workCard1'));
   // Animations END
 });
 
