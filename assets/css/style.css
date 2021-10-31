@@ -101,8 +101,7 @@
 
 .card1Imgpreview,
 .card2Imgpreview,
-.card3Imgpreview
-{
+.card3Imgpreview {
   padding: 0;
 }
 /* Work END */
@@ -173,26 +172,18 @@ a:hover {
   justify-content: space-between;
 }
 
-.card1Desc {
-  height: 100px;
-  overflow-y: auto;
-  max-height: 100px;
-}
-.card2Desc {
-  height: 100px;
-  overflow-y: auto;
-  max-height: 100px;
-}
+.card1Desc,
+.card2Desc,
 .card3Desc {
   height: 100px;
   overflow-y: auto;
   max-height: 100px;
+  padding: 5px;
 }
 
 .card1Img,
 .card2Img,
-.card3Img
- {
+.card3Img {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -201,13 +192,13 @@ a:hover {
 /* Work END*/
 
 /* Contact Info */
-.contact-info{
+.contact-info {
   text-decoration: none;
   color: white;
 }
 
 .contact-info:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   left: 0px;
@@ -222,7 +213,7 @@ a:hover {
 }
 
 .contact-info:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   left: 0px;
@@ -235,6 +226,13 @@ a:hover {
 .contact-info:hover:after {
   animation: borderAnimateAfter 1s linear forwards;
   animation-delay: 1s;
+}
+
+.fa-linkedin-in, .fa-github, .fa-envelope {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 /* Contact Info END*/
 
@@ -289,14 +287,14 @@ a:hover {
 
 /* Keyframes */
 @keyframes fade-left {
-	0% {
-		opacity: 0;
+  0% {
+    opacity: 0;
     transform: translateX(-500px);
-	}
-	100% {
-		opacity: 1;
+  }
+  100% {
+    opacity: 1;
     transform: translateX(100);
-	}
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
