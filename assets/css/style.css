@@ -1,7 +1,11 @@
 * {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 :root {
@@ -48,6 +52,7 @@
 
 .navbar {
   background-color: var(--main-color);
+  overflow-x: hidden;
 }
 
 .navbar-item {
@@ -117,59 +122,6 @@
 }
 /* Contact Info END */
 
-/* Footer */
-.footer {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.footerBtn,
-a {
-  text-align: left;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.footerBtn,
-a:hover {
-  color: var(--secondary-color);
-}
-
-.footerSocial {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  justify-content: end;
-  padding: 12px 0;
-  margin-right: 200px;
-}
-
-.footerSocial,
-a {
-  padding-left: 12px;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.footerSocial,
-a:hover {
-  color: var(--secondary-color);
-}
-
-.footerNav {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  padding-left: 0;
-  margin-left: 200px;
-  border-top: 2px solid rgba(255, 255, 255, 0.5);
-}
-
-.footerCopy {
-  padding-right: 0;
-  margin-right: 200px;
-  text-align: right;
-  border-top: 2px solid rgba(255, 255, 255, 0.5);
-}
-/* Footer END */
-
 /* Work */
 .work-arrows {
   display: flex;
@@ -222,6 +174,10 @@ a:hover {
   color: white;
 }
 
+.contact-info:hover {
+  color: white;
+}
+
 .contact-info:before {
   content: "";
   position: absolute;
@@ -253,13 +209,53 @@ a:hover {
   animation-delay: 1s;
 }
 
-.fa-linkedin-in, .fa-github, .fa-envelope {
+.contact-linkedIn, .contact-github, .contact-email {
   position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 /* Contact Info END*/
+
+/* Footer */
+footer a{
+  color: var(--secondary-color-transparent);
+}
+
+footer a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-socials {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.footer-content {
+  width: 80%;
+  margin: 0 auto;
+  border-top: 3px solid #3a3d40;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.footer-credit {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: end;
+}
+/* Footer END */
 
 /* Utilities */
 .header-text {
@@ -325,6 +321,23 @@ a:hover {
 @media (prefers-reduced-motion: no-preference) {
   .fadeLeft {
     animation: fade-left 1.2s 1;
+    animation-timing-function: ease;
+  }
+}
+
+/* footer fade animation */
+@keyframes fade-in-footer {
+  0% {
+    color: var(--secondary-color-transparent);
+  }
+  100% {
+    color: var(--secondary-color);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  footer a:hover {
+    animation: fade-in-footer 0.5s 1;
     animation-timing-function: ease;
   }
 }
