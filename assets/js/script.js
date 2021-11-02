@@ -61,24 +61,27 @@ $(document).ready(function () {
 
   $('.navbar').toggleClass('animate__animated animate__fadeInLeft animate__slow');
 
+  
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        $('#workCard3').toggleClass('fadeLeft');
+        // entry.target.classList.add('fadeLeft')
+        // entry.target.classList.remove('transparent')
+        $('#workCard3').addClass('fadeLeft');
         $('#workCard3').removeClass('transparent');
         setTimeout(function() {
-          $('#workCard2').toggleClass('fadeLeft');
+          $('#workCard2').addClass('fadeLeft');
           $('#workCard2').removeClass('transparent');
         }, 200)
         setTimeout(function() {
-          $('#workCard1').toggleClass('fadeLeft');
+          $('#workCard1').addClass('fadeLeft');
           $('#workCard1').removeClass('transparent');
         }, 300)
       }
     });
   });
   
-  observer.observe(document.querySelector('#workCard1'));
+  observer.observe(document.querySelector('.workSection'));
   // Animations END
 });
 
