@@ -133,8 +133,8 @@
               <h5 class="card1Title has-text-white"></h5>
               <p class="card1Desc"></p>
               <div>
-                <a target="_blank" class="btnSiteLink1 mb-1 button is-small is-info is-outlined has-text-weight-bold">View Site</a>
-                <a target="_blank" class="btnRepoLink1 button is-small is-info is-outlined has-text-weight-bold">View on GitHub</a>
+                <a target="_blank" class="btnSiteLink1 mb-1 button is-info is-outlined has-text-weight-bold">View Site</a>
+                <a target="_blank" class="btnRepoLink1 button is-info is-outlined has-text-weight-bold">View on GitHub</a>
               </div>
             </div>
           </div>
@@ -153,8 +153,8 @@
               <h5 class="card2Title has-text-white"></h5>
               <p class="card2Desc"></p>
               <div>
-                <a target="_blank" class="btnSiteLink2 mb-1 button is-small is-info is-outlined has-text-weight-bold">View Site</a>
-                <a target="_blank" class="btnRepoLink2 button is-small is-info is-outlined has-text-weight-bold">View on GitHub</a>
+                <a target="_blank" class="btnSiteLink2 mb-1 button is-info is-outlined has-text-weight-bold">View Site</a>
+                <a target="_blank" class="btnRepoLink2 button is-info is-outlined has-text-weight-bold">View on GitHub</a>
               </div>
             </div>
           </div>
@@ -173,8 +173,8 @@
               <h5 class="card3Title has-text-white"></h5>
               <p class="card3Desc"></p>
               <div>
-                <a target="_blank" class="btnSiteLink3 mb-1 button is-small is-info is-outlined has-text-weight-bold">View Site</a>
-                <a target="_blank" class="btnRepoLink3 button is-small is-info is-outlined has-text-weight-bold">View on GitHub</a>
+                <a target="_blank" class="btnSiteLink3 mb-1 button is-info is-outlined has-text-weight-bold">View Site</a>
+                <a target="_blank" class="btnRepoLink3 button is-info is-outlined has-text-weight-bold">View on GitHub</a>
               </div>
             </div>
           </div>
@@ -184,42 +184,44 @@
     <!-- Contact Info -->
     <section id="contactInfo" class="section">
       <div class="columns is-vcentered">
-        <div class="is-half is-offset-one-quarter column pl-0 pr-0 work-arrows">
-          <h3 class="text-color has-text-weight-bold header-text">Contact</h3>
+        <div class="column pl-0 pr-0 work-arrows contact-header-container">
+          <h3 class="text-color contact-header-text">Contact</h3>
         </div>
       </div>
       <!-- LinkedIn -->
-      <div class="columns mb-3 is-vcentered">
-        <a href="https://www.linkedin.com/in/matthew-pandolfo-22b6b1192/" target="_blank" class="card-background contact-info card is-offset-one-quarter column is-2">
+      <div class="columns mb-3 is-vcentered contactCards">
+        <a href="https://www.linkedin.com/in/matthew-pandolfo-22b6b1192/" target="_blank" id="linkedinContact" class="is-2 card-background contact-info column">
           <div class="columns">
             <div class="column">
               <p class="is-size-4 has-text-weight-medium">LinkedIn</p>
               <p class="is-size-7 text-color">Matthew Pandolfo</p>
             </div>
             <div class="column is-3">
-              <i class="contact-linkedIn fab fa-linkedin-in is-size-2-desktop"></i>
+              <i class="contact-linkedIn fab fa-linkedin-in is-size-2-desktop is-size-1-mobile"></i>
             </div>
           </div>
         </a>
-        <a href="https://github.com/PandolfoM" target="_blank" class="card-background contact-info card m-1 column is-2">
+        <!-- github -->
+        <a href="https://github.com/PandolfoM" target="_blank" id="githubContact" class="is-2 card-background contact-info column">
           <div class="columns">
             <div class="column">
               <p class="is-size-4 has-text-weight-medium">GitHub</p>
               <p class="is-size-7 text-color">PandolfoM</p>
             </div>
             <div class="column is-3">
-              <i class="contact-github fab fa-github is-size-2-desktop"></i>
+              <i class="contact-github fab fa-github is-size-2-desktop is-size-1-mobile"></i>
             </div>
           </div>
         </a>
-        <a href="mailto:matt@pandolfo.com" target="_blank" class="card-background contact-info card column is-2">
+        <!-- email -->
+        <a href="mailto:matt@pandolfo.com" target="_blank" id="mailContact" class="is-2 card-background contact-info column">
           <div class="columns">
             <div class="column">
               <p class="is-size-4 has-text-weight-medium">Email</p>
               <p class="is-size-7 text-color">matt@pandolfo.com</p>
             </div>
             <div class="column is-3">
-              <i class="contact-email fas fa-envelope is-size-2-desktop"></i>
+              <i class="contact-email fas fa-envelope is-size-2-desktop is-size-1-mobile"></i>
             </div>
           </div>
         </a>
@@ -242,7 +244,7 @@
           <a>Contact</a>
         </div>
         <div class="footer-credit column">
-          <p>Created by Matthew Pandolfo &copy; 2021</p>
+          <p>Created by Matthew Pandolfo &copy; <span id="copyDate"></span></p>
         </div>
       </div>
       </div>
