@@ -88,15 +88,6 @@ $(document).ready(function () {
   const date = new Date()
   $('#copyDate').text(date.getFullYear());
   // Copyright Date END
-
-  $('#contactInfo a').hover(function () {
-      // over
-    console.log(this.id)
-    }, function () {
-      // out
-      console.log('out')
-    }
-  );
 });
 
 function workPageContent(title, title2, title3, desc, desc2, desc3, img, img2, img3, imgPrev, img2Prev, img3Prev, site, site2, site3, repo, repo2, repo3) {
