@@ -1,9 +1,9 @@
-let title = ['Coding Quiz', 'Note Taker', 'Emprise']
-let desc = ['A simple 5 question quiz that tests your knowledge of JavaScript.', 'A website that allows you to take notes and save them to a database to use for later.', 'A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast']
-let img = ['./assets/img/codingQuiz.jpg', './assets/img/noteTaker.jpg', './assets/img/emprise.jpg']
+let title = ['Fomo Mock Exchange', 'Note Taker', 'Emprise']
+let desc = ['A real time stock exchange for people who just want to mess around with stocks and not use real currency', 'A website that allows you to take notes and save them to a database to use for later.', 'A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast']
+let img = ['./assets/img/fomoMockExchange.jpg', './assets/img/noteTaker.jpg', './assets/img/emprise.jpg']
 let imgPrev = ['./assets/img/previews/imgPreview.jpeg', './assets/img/previews/img2Preview.jpeg', './assets/img/previews/img3Preview.jpeg']
-let site = ['https://pandolfom.github.io/coding-quiz/', 'https://salty-dawn-40447.herokuapp.com/', 'https://codemasterdev.github.io/Project-1/']
-let repo = ['https://github.com/PandolfoM/coding-quiz', 'https://github.com/PandolfoM/note-taker', 'https://github.com/codemasterdev/Project-1']
+let site = ['https://agile-escarpment-74741.herokuapp.com/', 'https://salty-dawn-40447.herokuapp.com/', 'https://codemasterdev.github.io/Project-1/']
+let repo = ['https://github.com/RynMrphy18/fomo-mock-exchange', 'https://github.com/PandolfoM/note-taker', 'https://github.com/codemasterdev/Project-1']
 
 $(document).ready(function () {
   let workPage = 0;
@@ -28,12 +28,12 @@ $(document).ready(function () {
     }
     if (workPage === 1) {
       // Page 2 details
-      let title = ['Title', 'Title2', 'Title3'];
-      let desc = ['Desc1', 'Desc2', 'Desc3'];
-      let img = ['']
-      let imgPrev = ['']
-      let site = ['']
-      let repo = ['']
+      let title = ['Coding Quiz', 'Title2', 'Title3'];
+      let desc = ['A simple 5 question quiz that tests your knowledge of JavaScript.', 'Desc2', 'Desc3'];
+      let img = ['./assets/img/codingQuiz.jpg', '', '']
+      let imgPrev = ['./assets/img/previews/imgPreview.jpeg', '', '']
+      let site = ['https://pandolfom.github.io/coding-quiz/', '', '']
+      let repo = ['https://github.com/PandolfoM/coding-quiz', '', '']
       workPageContent(...title, ...desc, ...img, ...imgPrev, ...site, ...repo);
     }
   });
@@ -44,12 +44,13 @@ $(document).ready(function () {
       workPage = 0;
     }
     if (workPage === 0) {
-      let title = ['Coding Quiz', 'Note Taker', 'Emprise']
-      let desc = ['A simple 5 question quiz that tests your knowledge of JavaScript.', 'A website that allows you to take notes and save them to a database to use for later.', 'A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast']
-      let img = ['./assets/img/codingQuiz.jpg', './assets/img/noteTaker.jpg', './assets/img/emprise.jpg']
-      let site = ['https://pandolfom.github.io/coding-quiz/', 'https://salty-dawn-40447.herokuapp.com/', 'https://codemasterdev.github.io/Project-1/']
-      let repo = ['https://github.com/PandolfoM/coding-quiz', 'https://github.com/PandolfoM/note-taker', 'https://github.com/codemasterdev/Project-1']
-      workPageContent(...title, ...desc, ...img, ...site, ...repo);    
+      let title = ['Fomo Mock Exchange', 'Note Taker', 'Emprise']
+      let desc = ['A real time stock exchange for people who just want to mess around with stocks and not use real currency', 'A website that allows you to take notes and save them to a database to use for later.', 'A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast']
+      let img = ['./assets/img/fomoMockExchange.jpg', './assets/img/noteTaker.jpg', './assets/img/emprise.jpg']
+      let imgPrev = ['./assets/img/previews/imgPreview.jpeg', './assets/img/previews/img2Preview.jpeg', './assets/img/previews/img3Preview.jpeg']
+      let site = ['https://agile-escarpment-74741.herokuapp.com/', 'https://salty-dawn-40447.herokuapp.com/', 'https://codemasterdev.github.io/Project-1/']
+      let repo = ['https://github.com/RynMrphy18/fomo-mock-exchange', 'https://github.com/PandolfoM/note-taker', 'https://github.com/codemasterdev/Project-1']
+      workPageContent(...title, ...desc, ...img, ...imgPrev, ...site, ...repo);    
     }
   });
   // Navigate Work END
