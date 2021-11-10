@@ -32,16 +32,16 @@ $(document).ready(function () {
     }
     if (workPage === 1) {
       // Page 2 details
-      let title = ["Coding Quiz", "Title2", "Title3"];
+      let title = ["Coding Quiz", "Tech Blog", "Weather Dashboard"];
       let desc = [
         "A simple 5 question quiz that tests your knowledge of JavaScript.",
-        "Desc2",
-        "Desc3",
+        "Tech blog is a blog where you can sign up and start posting anything you would like other people to see.",
+        "Weather Dashboard is an app where you can search a city of your choice and it will bring up the 5 day forecast, temperature, wind speed, humidity, and UV index.",
       ];
-      let img = ["./assets/img/codingQuiz.jpg", "", ""];
-      let imgPrev = ["./assets/img/previews/imgPreview.jpeg", "", ""];
-      let site = ["https://pandolfom.github.io/coding-quiz/", "", ""];
-      let repo = ["https://github.com/PandolfoM/coding-quiz", "", ""];
+      let img = ["./assets/img/codingQuiz.jpg", "./assets/img/techBlog.jpg", "./assets/img/weatherDashboard.jpg"];
+      let imgPrev = ["./assets/img/previews/imgPreview.jpeg", "./assets/img/previews/img5Preview.jpeg", "./assets/img/previews/img6Preview.jpeg"];
+      let site = ["https://pandolfom.github.io/coding-quiz/", "https://desolate-forest-49599.herokuapp.com/", "https://pandolfom.github.io/weather-dashboard/"];
+      let repo = ["https://github.com/PandolfoM/coding-quiz", "https://github.com/PandolfoM/tech-blog", "https://github.com/PandolfoM/weather-dashboard"];
       workPageContent(...title, ...desc, ...img, ...imgPrev, ...site, ...repo);
     }
   });
