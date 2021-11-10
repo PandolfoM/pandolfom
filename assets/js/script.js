@@ -22,23 +22,35 @@ $(document).ready(function () {
 
   // Navigate My Work
   $("#workBtnRight").click(function () {
+    $(".workSection ").addClass("animate__animated animate__fadeIn animate__faster");
+    setTimeout(function () {
+      $(".workSection").removeClass("animate__animated animate__fadeIn animate__faster");
+    }, 500);
     workPage++;
     if (workPage > 1) {
       workPage = 1;
     }
     if (workPage === 1) {
       // Page 2 details
-      let title = ['Coding Quiz', 'Title2', 'Title3'];
-      let desc = ['A simple 5 question quiz that tests your knowledge of JavaScript.', 'Desc2', 'Desc3'];
-      let img = ['./assets/img/codingQuiz.jpg', '', '']
-      let imgPrev = ['./assets/img/previews/imgPreview.jpeg', '', '']
-      let site = ['https://pandolfom.github.io/coding-quiz/', '', '']
-      let repo = ['https://github.com/PandolfoM/coding-quiz', '', '']
+      let title = ["Coding Quiz", "Title2", "Title3"];
+      let desc = [
+        "A simple 5 question quiz that tests your knowledge of JavaScript.",
+        "Desc2",
+        "Desc3",
+      ];
+      let img = ["./assets/img/codingQuiz.jpg", "", ""];
+      let imgPrev = ["./assets/img/previews/imgPreview.jpeg", "", ""];
+      let site = ["https://pandolfom.github.io/coding-quiz/", "", ""];
+      let repo = ["https://github.com/PandolfoM/coding-quiz", "", ""];
       workPageContent(...title, ...desc, ...img, ...imgPrev, ...site, ...repo);
     }
   });
 
   $("#workBtnLeft").click(function () {
+    $(".workSection ").addClass("animate__animated animate__fadeIn animate__faster");
+    setTimeout(function () {
+      $(".workSection").removeClass("animate__animated animate__fadeIn animate__faster");
+    }, 500);
     workPage--;
     if (workPage < 0) {
       workPage = 0;
