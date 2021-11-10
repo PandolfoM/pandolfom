@@ -75,12 +75,12 @@ body, html {
 }
 
 .nameTitle {
-  font-size: 2vw;
+  /* font-size: 2vw; */
   color: white;
 }
 
 .subtitle {
-  font-size: 1.2vw;
+  /* font-size: 1.2vw; */
   color: rgba(255, 255, 255, 0.5);
 }
 /* Hero END */
@@ -194,7 +194,7 @@ body, html {
   justify-content: center;
 }
 
-.contactCards a:hover {
+.contact-info:hover {
   color: white;
   transform: scale(1.03);
   transition: all .5s ease;
@@ -202,13 +202,10 @@ body, html {
   z-index: 9999;
 }
 
-.contactCards a {
-  border-radius: .25rem;
-  margin: 0.8em;
-  transition: all .5s ease;
-}
-
 .contact-info {
+  border-radius: .25rem;
+  margin: 0.25rem;
+  transition: all .5s ease;
   text-decoration: none;
   color: white;
   width: 50px;
@@ -220,6 +217,10 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .contact-header-container {
@@ -231,13 +232,6 @@ body, html {
 .contact-header-text {
   font-weight: bold;
   font-size: 1.7em;
-}
-
-.contact-linkedIn, .contact-github, .contact-email {
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 /* Contact Info END*/
 
@@ -508,6 +502,80 @@ footer a:hover {
     .btnRepoLink2,
     .btnRepoLink3 {
       height: 5vw;
+    }
+  }
+
+  /* IPhone X */
+  @media screen and (max-width: 375px) {
+    .contactSubtitle {
+      display: none;
+    }
+
+    .contact-info .columns .column .has-text-weight-medium {
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-linkedIn,
+    .contact-github,
+    .contact-email {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      left: 0;
+      top: 0;
+      transform: translate(0, 0);
+    }
+
+    .contact-info {
+      color: white;
+      border: var(--secondary-color) 2px solid;
+      /* box-shadow: 0 0 2px 2px var(--secondary-color-transparent); */
+    }
+
+    .hero-content {
+      width: 300px;
+    }
+
+    .btnSiteLink1,
+    .btnSiteLink2,
+    .btnSiteLink3 {
+      height: 15vw;
+    }
+
+    .btnRepoLink1,
+    .btnRepoLink2,
+    .btnRepoLink3 {
+      height: 15vw;
+    }
+
+    .aboutCardLeft {
+      display: none;
+    }
+
+    #aboutMeHeader {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      font-weight: 700!important;
+      font-size: 20px;
+    }
+
+    #aboutMeText {
+      text-align: center;
+    }
+
+    .footer-socials {
+      display: none;
+    }
+
+    .footer {
+      padding: 1rem 1rem 2rem ;
+    }
+
+    .footer-content {
+      border: none;
     }
   }
 /* Screen size END */
