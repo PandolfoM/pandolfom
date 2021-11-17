@@ -1,118 +1,250 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Portfolio - Matthew</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Portfolio - Matthew</title>
-</head>
+  <body>
+    <!-- Navigation -->
+    <nav
+      class="navbar is-transparent is-fixed-top is-mobile"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" id="portfolioNav" href="/">
+          <strong>Portfolio</strong>
+        </a>
 
-<body>
-  <!-- Header with Navigation -->
-  <header>
-    <h1>Portfolio</h1>
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-    <nav>
-      <ul>
-        <li>
-          <a href="#about-me">About Me</a>
-        </li>
-        <li>
-          <a href="#work">Work</a>
-        </li>
-        <li>
-          <a href="#contact">Contact Me</a>
-        </li>
-        <li>
-          <a href="/">Resume</a>
-        </li>
-      </ul>
+      <div id="navigationBar" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" id="homeNav" href="#"> Home </a>
+
+          <a class="navbar-item" id="aboutNav" href="#about"> About </a>
+
+          <a class="navbar-item" id="workNav" href="#work"> Work </a>
+
+          <a class="navbar-item" id="contactNav" href="#contactInfo"> Contact </a>
+        </div>
+      </div>
     </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-name">
-      <h2>Matthew Pandolfo</h2>
-    </div>
-  </section>
-
-  <!-- Main Section -->
-  <section class="main-section flex">
-    <div class="content">
-      <!-- About Me Section -->
-      <div class="about">
-        <div id="about-me" class="about-me">
-          <h3>About <br>Me</h3>
-        </div>
-        <div class="about-me-text">
-          <p>
-            about me description about me description about me description about me description about me description
-            about me
-            description about me description about me description about me description about me description about me
-            description
-            about me description about me description about me description about me description about me description
-            about me
-            description about me description about me description about me description about me description about me
-            description
-            about me description about me description about me description about me description about me description
-            about me
-            description about me description about me description about me description about me description about me
-            description
-            about me description about me description
-          </p>
+    <!-- Hero -->
+    <section class="hero is-fullheight">
+      <div class="container hero-body">
+        <div class="hero-content has-text-centered">
+          <!-- Picture of me -->
+          <figure class="container image is-128x128">
+            <img
+              class="is-rounded pfp"
+              src="./assets/img/profile.jpg"
+            />
+          </figure>
+          <p class="nameTitle is-size-3 is-size-5-mobile">Matthew Pandolfo</p>
+          <p class="subtitle is-size-5 is-size-5-mobile">Full Stack Developer</p>
         </div>
       </div>
-      <!-- Work Showcase -->
-      <div class="my-work flex">
-        <div id="work" class="work">
-          <h3>Work</h3>
-        </div>
-        <div class="photo-gallery flex">
-          <div>
-            <a href="https://codemasterdev.github.io/Project-1/" target="_blank" title="Project 1">
-              <img class="surf-img" src="./assets/img/project1.jpg" alt="Project 1" />
-            </a>
-            <a href="https://agile-escarpment-74741.herokuapp.com/" target="_blank" title="Fomo Mock Exchange">
-              <img src="./assets/img/mockExchange.jpg" alt="" />
-            </a>
+    </section>
+    <!-- About Me -->
+    <section id="about" class="section">
+      <div class="columns is-vcentered">
+        <div class="card-background animate__animated animate__fadeIn is-half is-offset-one-quarter column">
+          <div class="columns">
+            <div class="column is-half p-5 aboutCardLeft">
+              <i class="aboutIcon animate__animated animate__delay-2s animate__fadeIn fas fa-code has-text-white"></i>
+            </div>
+            <div class="column p-5">
+              <h3 id="aboutMeHeader" class="text-color animate__animated animate__delay-3s animate__fadeIn has-text-weight-bold">
+                About Me
+              </h3>
+              <br />
+              <p id="aboutMeText" class="aboutMeText has-text-white animate__animated animate__delay-3s animate__fadeIn">
+                Hello, my name is Matthew Pandolfo! I am a 19-year-old Full Stack Developer. I am currently in the UConn Coding Bootcamp looking to graduate in December of 2021.
+              </p>
+              <!--  I graduated from the UConn Coding Bootcamp in December of 2021. -->
+            </div>
           </div>
-          <div>
-            <a href="https://pandolfom.github.io/password-generator/" target="_blank" title="Password Generator">
-              <img src="./assets/img/passwordGen.png"  alt=""/>
-            </a>
-            <a href="https://pandolfom.github.io/coding-quiz/" target="_blank" title="Coding Quiz">
-              <img src="./assets/img/codingQuiz.png" alt="" />
-            </a>
-          </div>
-          <a href="https://pandolfom.github.io/run-buddy/" target="_blank" title="Run Buddy">
-            <img class="runBuddy" src="./assets/img/runBuddy-bg.JPG" alt="" />
-          </a>
         </div>
       </div>
-<!-- Footer -->
-      <footer>
-        <h3 id="contact">Contact<br> Me</h3>
-    
-        <ul>
-          <li>
-            <a href="tel:860-944-6334">860.944.6334</a>
-          </li>
-          <li>
-            <a href="mailto:matt@pandolfo.com">matt@pandolfo.com</a>
-          </li>
-          <li>
-            <a href="https://github.com/PandolfoM" target="_blank">GitHub</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/matthew-pandolfo-22b6b1192/" target="_blank">LinkedIn</a>
-          </li>
-        </ul>
-      </footer>
-
-    </div>
-  </section>  
-</body>
-
-</html>
+    </section>
+    <!-- Work -->
+    <section id="work" class="section">
+      <div class="columns is-vcentered">
+        <div class="is-half is-offset-one-quarter column pl-0 pr-0 work-arrows">
+          <h3 class="text-color has-text-weight-bold header-text">Work</h3>
+          <div class="buttons">
+            <button id="workBtnLeft" class="button is-small is-info is-outlined fas fa-long-arrow-alt-left"></button>
+            <button id="workBtnRight" class="button is-small is-info is-outlined fas fa-long-arrow-alt-right"></button>
+          </div>
+        </div>
+      </div>
+      <!-- Cards -->
+      <div class="workSection columns">
+        <div id="workCard1" class="transparent card column is-2 m-1 has-text-centered">
+          <div class="card-image">
+            <figure>
+              <a class="card1Imgpreview" data-lightbox="image-1">
+                <img class="card1Img"></img>
+              </a>
+              <!-- <img class="card1Img" alt="Placeholder image" width="300"> -->
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h5 class="card1Title has-text-white"></h5>
+              <p class="card1Desc"></p>
+              <div>
+                <a target="_blank" class="btnSiteLink1 mb-1 button is-info is-outlined has-text-weight-bold">View Site</a>
+                <a target="_blank" class="btnRepoLink1 button is-info is-outlined has-text-weight-bold">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="workCard2" class="transparent card column is-2 m-1 has-text-centered">
+          <div class="card-image">
+            <figure class="">
+              <a class="card2Imgpreview" data-lightbox="image-1">
+                <img class="card2Img"></img>
+              </a>
+              <!-- <img class="card2Img" alt="Placeholder image" width="300"> -->
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h5 class="card2Title has-text-white"></h5>
+              <p class="card2Desc"></p>
+              <div>
+                <a target="_blank" class="btnSiteLink2 mb-1 button is-info is-outlined has-text-weight-bold">View Site</a>
+                <a target="_blank" class="btnRepoLink2 button is-info is-outlined has-text-weight-bold">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="workCard3" class="transparent card column is-2 m-1 has-text-centered">
+          <div class="card-image">
+            <figure>
+              <a class="card3Imgpreview" data-lightbox="image-1">
+                <img class="card3Img"></img>
+              </a>
+              <!-- <img class="card3Img" alt="Placeholder image" height="300"> -->
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h5 class="card3Title has-text-white"></h5>
+              <p class="card3Desc"></p>
+              <div>
+                <a target="_blank" class="btnSiteLink3 mb-1 button is-info is-outlined has-text-weight-bold">View Site</a>
+                <a target="_blank" class="btnRepoLink3 button is-info is-outlined has-text-weight-bold">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Info -->
+    <section id="contactInfo" class="section">
+      <div class="columns is-vcentered">
+        <div class="column pl-0 pr-0 work-arrows contact-header-container">
+          <h3 class="text-color contact-header-text">Contact</h3>
+        </div>
+      </div>
+      <!-- LinkedIn -->
+      <div class="columns mb-3 is-vcentered contactCards">
+        <a href="https://www.linkedin.com/in/matthew-pandolfo-22b6b1192/" target="_blank" id="linkedinContact" class="is-2 card-background contact-info column">
+          <div class="columns">
+            <div class="column">
+              <p class="is-size-4 has-text-weight-medium">LinkedIn</p>
+              <p class="is-size-7 text-color contactSubtitle">Matthew Pandolfo</p>
+            </div>
+            <div class="column is-2">
+              <i class="contact-linkedIn fab fa-linkedin-in is-size-2-desktop is-size-2-mobile"></i>
+            </div>
+          </div>
+        </a>
+        <!-- github -->
+        <a href="https://github.com/PandolfoM" target="_blank" id="githubContact" class="is-2 card-background contact-info column">
+          <div class="columns">
+            <div class="column">
+              <p class="is-size-4 has-text-weight-medium">GitHub</p>
+              <p class="is-size-7 text-color contactSubtitle">PandolfoM</p>
+            </div>
+            <div class="column is-2">
+              <i class="contact-github fab fa-github is-size-2-desktop is-size-2-mobile"></i>
+            </div>
+          </div>
+        </a>
+        <!-- email -->
+        <a href="mailto:matt@pandolfo.com" target="_blank" id="mailContact" class="is-2 card-background contact-info column">
+          <div class="columns">
+            <div class="column">
+              <p class="is-size-4 has-text-weight-medium">Email</p>
+              <p class="is-size-7 text-color contactSubtitle">matt@pandolfo.com</p>
+            </div>
+            <div class="column is-2">
+              <i class="contact-email fas fa-envelope is-size-2-desktop is-size-2-mobile"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer main-background">
+      <div class="footer-socials">
+        <div class="footer-social column is-offset-11">
+          <a class="fab fa-github" href="https://github.com/PandolfoM" target="_blank"></a>
+          <a class="fab fa-linkedin" href="https://www.linkedin.com/in/matthew-pandolfo-22b6b1192" target="_blank"></a>
+          <a class="fas fa-envelope" href="mailto:matt@pandolfo.com"></a>
+        </div>
+      </div>
+      <div class="footer-content columns content has-text-centered">
+        <div class="footer-nav column">
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a>Contact</a>
+        </div>
+        <div class="footer-credit column">
+          <p>Created by Matthew Pandolfo &copy; <span id="copyDate"></span></p>
+        </div>
+      </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+  </html>
+  
