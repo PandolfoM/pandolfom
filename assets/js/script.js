@@ -22,11 +22,13 @@ $(document).ready(function () {
 
   // Navigate My Work
   $("#workBtnRight").click(function () {
-    $(".workSection ").addClass("animate__animated animate__fadeIn animate__faster");
-    setTimeout(function () {
+    workPage++;
+    if (workPage === 1) {
+      $(".workSection ").addClass("animate__animated animate__fadeIn animate__faster");
+      setTimeout(function () {
       $(".workSection").removeClass("animate__animated animate__fadeIn animate__faster");
     }, 500);
-    workPage++;
+    } 
     if (workPage > 1) {
       workPage = 1;
     }
@@ -47,11 +49,13 @@ $(document).ready(function () {
   });
 
   $("#workBtnLeft").click(function () {
-    $(".workSection ").addClass("animate__animated animate__fadeIn animate__faster");
-    setTimeout(function () {
+    workPage--;
+    if (workPage === 0) {
+      $(".workSection ").addClass("animate__animated animate__fadeIn animate__faster");
+        setTimeout(function () {
       $(".workSection").removeClass("animate__animated animate__fadeIn animate__faster");
     }, 500);
-    workPage--;
+    } 
     if (workPage < 0) {
       workPage = 0;
     }
