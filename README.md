@@ -1,17 +1,27 @@
 # Portfolio
+Personal portfolio that displays my talents as a Full Stack Developer
 
-## Purpose
-A website that showcases some of my capabilities. 
-
+## Table of Contents
+- [Portfolio](#portfolio)
+  - [Table of Contents](#table-of-contents)
+  - [Built With](#built-with)
+  - [Website](#website)
+  - [Site Preview](#site-preview)
+  - [Contribution](#contribution)
+  - [License](#license)
 ## Built With
 * HTML
 * CSS
+* JavaScript
+* 
+## Website
+http://mattpandolfo.com/
 
 ## Site Preview
-![Preview](./assets/img/page2.jpeg)
-
-## Website
-https://pandolfom.github.io/pandolfom/
+![Preview](./img/../assets/img/sitePreview.jpeg)
 
 ## Contribution
-Made by Matthew Pandolfo
+[Made by Matthew Pandolfo](https://github.com/PandolfoM)
+
+## License
+[MIT](./LICENSE)
