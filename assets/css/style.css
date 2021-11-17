@@ -384,7 +384,17 @@ footer a:hover {
   }
 
   /* IPhone X */
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 414px) {
+    #workCard1,
+    #workCard2,
+    #workCard3 {
+      flex-basis: auto;
+    }
+  
+    .card1Title {
+      width: 100%;
+    }
+
     .contactSubtitle {
       display: none;
     }
@@ -442,6 +452,10 @@ footer a:hover {
 
     #aboutMeText {
       text-align: center;
+    }
+
+    .footer-nav {
+      margin: 0 auto;
     }
 
     .footer-socials {
