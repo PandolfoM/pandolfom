@@ -21,7 +21,9 @@ http://mattpandolfo.com/
 ![Preview](./img/../assets/img/sitePreview.jpeg)
 
 ## Contribution
-[Made by Matthew Pandolfo](https://github.com/PandolfoM)
+<a href="https://github.com/PandolfoM/pandolfom/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=PandolfoM/pandolfom" />
+</a>
 
 ## License
 [MIT](./LICENSE)
