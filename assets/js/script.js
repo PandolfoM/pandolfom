@@ -2,7 +2,7 @@ let title = ['Fomo Mock Exchange', 'Note Taker', 'Emprise']
 let desc = ['A real time stock exchange for people who just want to mess around with stocks and not use real currency', 'A website that allows you to take notes and save them to a database to use for later.', 'A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast']
 let img = ['./assets/img/fomoMockExchange.jpg', './assets/img/noteTaker.jpg', './assets/img/emprise.jpg']
 let imgPrev = ['./assets/img/previews/imgPreview.jpeg', './assets/img/previews/img2Preview.jpeg', './assets/img/previews/img3Preview.jpeg']
-let site = ['https://agile-escarpment-74741.herokuapp.com/', 'https://salty-dawn-40447.herokuapp.com/', 'https://codemasterdev.github.io/Project-1/']
+let site = ['https://fomo-exchange.herokuapp.com/', 'https://salty-dawn-40447.herokuapp.com/', 'https://codemasterdev.github.io/Project-1/']
 let repo = ['https://github.com/RynMrphy18/fomo-mock-exchange', 'https://github.com/PandolfoM/note-taker', 'https://github.com/codemasterdev/Project-1']
 
 $(document).ready(function () {
@@ -60,7 +60,7 @@ $(document).ready(function () {
       let desc = ['A real time stock exchange for people who just want to mess around with stocks and not use real currency', 'A website that allows you to take notes and save them to a database to use for later.', 'A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast']
       let img = ['./assets/img/fomoMockExchange.jpg', './assets/img/noteTaker.jpg', './assets/img/emprise.jpg']
       let imgPrev = ['./assets/img/previews/imgPreview.jpeg', './assets/img/previews/img2Preview.jpeg', './assets/img/previews/img3Preview.jpeg']
-      let site = ['https://agile-escarpment-74741.herokuapp.com/', 'https://salty-dawn-40447.herokuapp.com/', 'https://codemasterdev.github.io/Project-1/']
+      let site = ['https://fomo-exchange.herokuapp.com/', 'https://salty-dawn-40447.herokuapp.com/', 'https://codemasterdev.github.io/Project-1/']
       let repo = ['https://github.com/RynMrphy18/fomo-mock-exchange', 'https://github.com/PandolfoM/note-taker', 'https://github.com/codemasterdev/Project-1']
       workPageContent(...title, ...desc, ...img, ...imgPrev, ...site, ...repo);    
     }
