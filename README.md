@@ -13,9 +13,9 @@ Personal portfolio that displays my talents as a Full Stack Developer
 * HTML
 * CSS
 * JavaScript
-* 
+  
 ## Website
-http://mattpandolfo.com/
+[Deployed Portfolio](http://mattpandolfo.com/)
 
 ## Site Preview
 ![Preview](./img/../assets/img/sitePreview.jpeg)
