@@ -1,3 +1,12 @@
+:root {
+  --main-color: #12171d;
+  --main2-color: #151b22;
+  --card-color: #232a33;
+  --secondary-color: #008ae6;
+  --secondary-color-transparent: rgba(0, 138, 230, 0.5);
+  --animate-delay: 0.5s;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,15 +16,7 @@ body, html {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-}
-
-:root {
-  --main-color: #12171d;
-  --main2-color: #151b22;
-  --card-color: #232a33;
-  --secondary-color: #008ae6;
-  --secondary-color-transparent: rgba(0, 138, 230, 0.5);
-  --animate-delay: 0.5s;
+  background-color: var(--main-color);
 }
 
 /* Scrollbar */
