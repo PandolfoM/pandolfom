@@ -279,7 +279,7 @@ footer a:hover {
 
 .footer-credit {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: end;
 }
 /* Footer END */
@@ -385,7 +385,55 @@ footer a:hover {
     }
   }
 
-  /* IPhone X */
+  /* IPhone X Max Landscape */
+  @media screen and (max-width: 736px) {
+    .contactSubtitle {
+      display: none;
+    }
+
+    .contact-info .columns .column .has-text-weight-medium {
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-info .columns .column {
+      padding: 0.3rem;
+    }
+
+    .contact-linkedIn,
+    .contact-github,
+    .contact-email {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      left: 0;
+      top: 0;
+      transform: translate(0, 0);
+    }
+
+    .contact-info {
+      color: white;
+      border: var(--secondary-color) 2px solid;
+      /* box-shadow: 0 0 2px 2px var(--secondary-color-transparent); */
+    } 
+    
+    .footer-social {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+    }
+
+    .footer-social a {
+      padding: 0 0 0 0.75rem;
+    }
+    
+    .footer-content {
+      display: flex;
+    }
+  }
+
+  /* IPhone X Max */
   @media screen and (max-width: 414px) {
     #workCard1,
     #workCard2,
