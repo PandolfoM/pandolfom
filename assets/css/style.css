@@ -9,6 +9,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body, html {
@@ -255,13 +256,16 @@ footer a:hover {
 .footer-socials {
   width: 80%;
   margin: 0 auto;
-  padding: 0;
 }
 
 .footer-social {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.footer-social a:nth-child(2) {
+  padding: 0 10px;
 }
 
 .footer-content {
@@ -383,10 +387,7 @@ footer a:hover {
     .btnRepoLink3 {
       height: 5vw;
     }
-  }
 
-  /* IPhone X Max Landscape */
-  @media screen and (max-width: 736px) {
     .contactSubtitle {
       display: none;
     }
@@ -394,10 +395,6 @@ footer a:hover {
     .contact-info .columns .column .has-text-weight-medium {
       display: flex;
       justify-content: center;
-    }
-
-    .contact-info .columns .column {
-      padding: 0.3rem;
     }
 
     .contact-linkedIn,
@@ -416,25 +413,15 @@ footer a:hover {
       color: white;
       border: var(--secondary-color) 2px solid;
       /* box-shadow: 0 0 2px 2px var(--secondary-color-transparent); */
-    } 
-    
-    .footer-social {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: flex-end;
     }
 
-    .footer-social a {
-      padding: 0 0 0 0.75rem;
-    }
-    
-    .footer-content {
-      display: flex;
+    .contact-icons {
+      display: none;
     }
   }
-
+  
   /* IPhone X Max */
-  @media screen and (max-width: 414px) {
+  @media only screen and (max-width: 414px) {
     #workCard1,
     #workCard2,
     #workCard3 {
