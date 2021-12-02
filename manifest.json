@@ -1,45 +1,20 @@
 {
-  "name": "Matthew Pandolfo Portfolio",
-  "short_name": "Portfolio",
+  "name": "Matthew Pandolfo",
+  "short_name": "PandolfoM",
   "theme_color": "#12171d",
   "background_color": "#12171d",
   "start_url": "/",
   "display": "standalone",
   "icons": [
     {
-      "src": "img/icons/coding16x16.png",
-      "sizes": "16x16",
-      "type": "images/png"
+      "src": "img/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
-      "src": "img/icons/coding24x24.png",
-      "sizes": "24x24",
-      "type": "images/png"
-    },
-    {
-      "src": "img/icons/coding32x32.png",
-      "sizes": "32x32",
-      "type": "images/png"
-    },
-    {
-      "src": "img/icons/coding64x64.png",
-      "sizes": "64x64",
-      "type": "images/png"
-    },
-    {
-      "src": "img/icons/coding128x128.png",
-      "sizes": "128x128",
-      "type": "images/png"
-    },
-    {
-      "src": "img/icons/coding256x256.png",
-      "sizes": "256x256",
-      "type": "images/png"
-    },
-    {
-      "src": "img/icons/coding512x512.png",
+      "src": "img/icons/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "images/png"
+      "type": "image/png"
     }
   ]
 }
