@@ -1,0 +1,12 @@
+.figure {
+  text-align: center;
+  display: block !important;
+}
+
+.figure-img {
+  border-radius: 100%;
+}
+
+figcaption > h2 {
+  color: white;
+}
