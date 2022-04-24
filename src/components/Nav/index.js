@@ -4,7 +4,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 function Navigation() {
   return (
     <Navbar variant="dark">
-      <Container>
+      <Container fluid>
         <Navbar.Brand>Portfolio</Navbar.Brand>
         <Nav className="justify-content-end">
           <Nav.Link>Home</Nav.Link>
