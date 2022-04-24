@@ -5,7 +5,7 @@ import "./style.css";
 
 function Hero() {
   return (
-    <Container fluid>
+    <Container className="hero">
       <Figure>
         <Figure.Image src={pfp} alt="Matthew Pandolfo" />
         <Figure.Caption>
