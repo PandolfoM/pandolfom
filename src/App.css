@@ -13,3 +13,13 @@ body {
   box-sizing: border-box;
   background-color: var(--main-color)!important;
 }
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.388);
+}
