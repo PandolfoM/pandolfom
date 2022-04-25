@@ -1,0 +1,20 @@
+.workcards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.worksection {
+  padding: 30px 0;
+}
+
+.workcards > .card > .card-body > .btn {
+  width: 100%;
+  margin: 0.2vh 0;
+}
+
+.card {
+  background-color: var(--card-color) !important;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.549);
+}
