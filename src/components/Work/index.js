@@ -10,6 +10,9 @@ function Work() {
 
   return (
     <Container fluid className="worksection">
+      <Row className="workHeader">
+        <h3>Work Showcase</h3>
+      </Row>
       <Row>
         <Col lg={3} md={2} xs={1} className="workLeft">
           {page === 1 && (

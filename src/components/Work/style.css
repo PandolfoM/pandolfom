@@ -1,3 +1,14 @@
+.workHeader {
+  
+  color: var(--secondary-color);
+}
+
+.workHeader > h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .workcards {
   display: flex;
   justify-content: center;
