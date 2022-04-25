@@ -6,6 +6,10 @@
   --secondary-color-transparent: rgba(0, 138, 230, 0.5);
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
