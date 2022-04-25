@@ -6,9 +6,9 @@ import "./style.css";
 
 function About() {
   return (
-    <Container fluid>
+    <Container fluid className="aboutsection">
       <Row>
-        <Col md={3} xs={1}/>
+        <Col lg={3} md={2} xs={1}/>
         <Col>
           <Row className="about">
             <Col className="aboutIcon">
@@ -25,7 +25,7 @@ function About() {
             </Col>
           </Row>
         </Col>
-        <Col md={3} xs={1}/>
+        <Col lg={3} md={2} xs={1}/>
       </Row>
     </Container>
   );

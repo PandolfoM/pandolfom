@@ -1,3 +1,8 @@
+.aboutsection {
+  background-color: var(--main2-color);
+  padding: 30px 0;
+}
+
 .about {
   color: white;
   background-color: var(--card-color);
