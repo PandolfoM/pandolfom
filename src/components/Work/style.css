@@ -50,19 +50,6 @@
   flex-wrap: wrap;
 }
 
-.workRight > svg {
-  font-size: 15vh;
-  color: var(--secondary-color);
-  opacity: 0.3;
-  transition: all .3s ease;
-}
-
-.workRight > svg:hover {
-  font-size: 17vh;
-  opacity: 1;
-  transition: all .3s ease;
-}
-
 .workLeft{
   display: flex;
   justify-content: flex-end;
@@ -70,14 +57,14 @@
   flex-wrap: wrap;
 }
 
-.workLeft > svg {
+.workRight > svg, .workLeft > svg {
   font-size: 15vh;
   color: var(--secondary-color);
   opacity: 0.3;
   transition: all .3s ease;
 }
 
-.workLeft > svg:hover {
+.workRight > svg:hover, .workLeft > svg:hover {
   font-size: 17vh;
   opacity: 1;
   transition: all .3s ease;

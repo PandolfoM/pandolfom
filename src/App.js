@@ -3,6 +3,7 @@ import Navigation from "./components/Nav";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Work from "./components/Work";
+import Scroll from "./components/Scroll";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <About />
       <Work />
+      <Scroll />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import "./style.css";
 
 function About() {
   return (
-    <Container fluid className="aboutsection">
+    <Container fluid className="aboutsection" id="about">
       <Row>
         <Col lg={3} md={2} xs={1}/>
         <Col>

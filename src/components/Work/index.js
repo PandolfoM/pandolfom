@@ -9,7 +9,7 @@ function Work() {
   const [page, setpage] = useState(0);
 
   return (
-    <Container fluid className="worksection">
+    <Container fluid className="worksection" id="work">
       <Row className="workHeader">
         <h3>Work Showcase</h3>
       </Row>
