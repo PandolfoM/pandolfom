@@ -3,7 +3,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 
 function Navigation() {
   return (
-    <Navbar variant="dark" expand="md">
+    <Navbar variant="dark" expand="md" fixed="top">
       <Container fluid>
         <Navbar.Brand>Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

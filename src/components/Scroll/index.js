@@ -31,7 +31,7 @@ function Scroll() {
         <Button className="scrollTop">
           <FontAwesomeIcon
             icon={faAngleUp}
-            size="3x"
+            size="2x"
             onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
             }}
