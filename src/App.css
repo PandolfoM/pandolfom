@@ -7,14 +7,14 @@
 }
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   background-color: var(--main-color)!important;
 }
 
@@ -26,8 +26,4 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.388);
-}
-
-.justify-content-end {
-  justify-content: end;
 }

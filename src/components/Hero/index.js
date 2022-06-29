@@ -1,19 +1,24 @@
 import React from "react";
-import { Container, Figure } from "react-bootstrap";
-import pfp from "../../assets/pfp.jpg";
-import "./style.css";
+import { Box, Typography } from "@mui/material";
 
 function Hero() {
   return (
-    <Container className="hero">
-      <Figure>
-        <Figure.Image src={pfp} alt="Matthew Pandolfo" />
-        <Figure.Caption>
-          <h2>Matthew Pandolfo</h2>
-          <h5>Full Stack Developer</h5>
-        </Figure.Caption>
-      </Figure>
-    </Container>
+    <Box
+      component={"section"}
+      sx={{
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        color: "white",
+      }}>
+      <Box component={"div"}>
+        <Typography sx={{fontSize: "5em", marginBottom: "0.5em"}}>Matthew Pandolfo</Typography>
+        <Typography sx={{fontSize: "2em", opacity: "0.5"}}>Full Stack Developer</Typography>
+      </Box>
+    </Box>
   );
 }
 
