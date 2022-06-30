@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 
 function Hero() {
   return (
-    <Box
+    <Box id="home"
       component={"section"}
       sx={{
         width: "100vw",
@@ -15,8 +15,12 @@ function Hero() {
         color: "white",
       }}>
       <Box component={"div"}>
-        <Typography sx={{fontSize: "5em", marginBottom: "0.5em"}}>Matthew Pandolfo</Typography>
-        <Typography sx={{fontSize: "2em", opacity: "0.5"}}>Full Stack Developer</Typography>
+        <Typography component="h1" sx={{ fontSize: "5em", marginBottom: "0.5em" }}>
+          Matthew Pandolfo
+        </Typography>
+        <Typography component="h2" sx={{ fontSize: "2em", opacity: "0.5" }}>
+          Full Stack Developer
+        </Typography>
       </Box>
     </Box>
   );

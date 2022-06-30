@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 html,
@@ -18,6 +19,23 @@ body {
   background-color: var(--main-color)!important;
 }
 
+/* Navbar */
+.navbtn > a {
+  color: white;
+  margin: 20px 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbtn > a > p {
+  font-weight: 500;
+  color: var(--secondary-color);
+  padding-right: 15px;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 10px;
