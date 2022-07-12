@@ -35,6 +35,15 @@ body {
   padding-right: 15px;
 }
 
+/* Work */
+.MuiCard-root{
+  display: flex;
+  flex-direction: column;
+}
+.MuiCardActions-root{
+   margin-top: auto;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   background-color: transparent;
@@ -44,4 +53,8 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.388);
+}
+
+.MuiTypography-body2 {
+  padding-right: 1px;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
+import { faCircle as faCircle2 } from "@fortawesome/free-solid-svg-icons";
 import { Box, Typography } from "@mui/material";
 
 function Nav() {
@@ -10,7 +11,7 @@ function Nav() {
         <li className="navbtn">
           <a href="#home">
             <Typography>Home</Typography>
-            <FontAwesomeIcon icon={faCircle} />
+            <FontAwesomeIcon icon={faCircle}/>
           </a>
         </li>
         <li className="navbtn">
