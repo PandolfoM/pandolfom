@@ -23,8 +23,8 @@
 
   {
     "title": "Half Foods",
-    "description": "Online grocery store where you can buy items to pickup later.",
-    "image": "https://i.imgur.com/LkB2qqN.png",
+    "description": "Online grocery store where you can buy items to pickup in store later.",
+    "image": "https://raw.githubusercontent.com/PandolfoM/half-foods/main/halffoods.jpeg",
     "github": "https://github.com/PandolfoM/half-foods",
     "site": "https://half-foods.herokuapp.com/"
   },
