@@ -7,7 +7,7 @@ import { Box, Typography } from "@mui/material";
 function Nav() {
   return (
     <Box sx={{ right: 100, position: "fixed"}}>
-      <ul>
+      <ul style={{listStyleType: 'none'}}>
         <li className="navbtn">
           <a href="#home">
             <Typography>Home</Typography>

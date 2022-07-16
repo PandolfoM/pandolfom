@@ -3,7 +3,7 @@ import React from "react";
 
 function About() {
   return (
-    <div id={"about"}>
+    <Box id="about" sx={{ width: "50%", margin: "auto" }}>
       <Typography component={"h3"}>About Me</Typography>
       <Typography component="p">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eleifend
@@ -46,8 +46,8 @@ function About() {
         justo tristique mattis at eu neque. Pellentesque habitant morbi
         tristique senectus et netus et malesuada fames ac turpis egestas.
       </Typography>
-    </div>
-  )
+    </Box>
+  );
 }
 
-export default About
+export default About;
