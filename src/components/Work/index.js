@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Card,
   CardActions,
   CardContent,
@@ -18,7 +19,12 @@ import React, { useEffect, useState } from "react";
 import data from "../../config.json";
 
 const workCards = (count) => (
-  <Grid container spacing={2} direction="row" justifyContent="space-around" marginBottom={'16px'}>
+  <Grid
+    container
+    spacing={2}
+    direction="row"
+    justifyContent="space-around"
+    marginBottom={"16px"}>
     {data.slice(0, count).map((work) => (
       <Grid item key={work.title}>
         <Card
@@ -74,7 +80,12 @@ const workCards = (count) => (
 );
 
 const workCardsTwo = (first, second) => (
-  <Grid container spacing={2} direction="row" justifyContent="space-around">
+  <Grid
+    container
+    spacing={2}
+    direction="row"
+    justifyContent="space-around"
+    marginBottom={"16px"}>
     {data.slice(first, second).map((work) => (
       <Grid item key={work.title}>
         <Card
@@ -199,7 +210,7 @@ function Work() {
       </Typography>
       <Box>
         {workCards(filterAmt.rowOne)}
-        <Box sx={{overflow: 'hidden'}}>
+        <Box sx={{ overflow: "hidden" }}>
           <Slide
             direction="down"
             in={expanded}
@@ -208,6 +219,13 @@ function Work() {
             {workCardsTwo(filterAmt.rowTwoStart, filterAmt.rowTwoEnd)}
           </Slide>
         </Box>
+        <Button
+          variant="outlined"
+          href="https://github.com/PandolfoM"
+          target="_blank"
+          sx={{margin: 'auto', width: "100%"}}>
+          Show All
+        </Button>
       </Box>
     </Box>
   );
