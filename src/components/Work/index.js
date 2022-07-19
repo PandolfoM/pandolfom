@@ -94,13 +94,10 @@ function Work() {
     if (Tablet) {
       setFilterAmt({ ...filterAmt, rowOne: 2, rowTwoStart: 2, rowTwoEnd: 4 });
     }
-    if (Mobile) {
-      setFilterAmt({ ...filterAmt, rowOne: 1, rowTwoStart: 1, rowTwoEnd: 1 });
-    }
-    if (!Tablet && !Mobile) {
+    if (!Tablet) {
       setFilterAmt({ ...filterAmt, rowOne: 3, rowTwoStart: 3, rowTwoEnd: 6 });
     }
-  }, [Tablet, Mobile]);
+  }, [Tablet]);
 
   return (
     <>
