@@ -102,7 +102,7 @@ function Work() {
   return (
     <>
       {!Mobile ? (
-        <Box id="work" sx={{ width: "70%", margin: "auto" }}>
+        <Box id="work" sx={{ width: "70%", margin: "auto", marginBottom: "2em" }}>
           <Typography
             gutterBottom
             component="h3"
