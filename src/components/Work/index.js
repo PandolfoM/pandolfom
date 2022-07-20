@@ -25,7 +25,7 @@ const workCards = (first, second) => (
     spacing={5}
     direction="row"
     justifyContent="center"
-    marginBottom={"16px"}>
+    marginBottom={"6px"}>
     {data.slice(first, second).map((work) => (
       <Grid item key={work.title}>
         <Card
@@ -102,7 +102,7 @@ function Work() {
   return (
     <>
       {!Mobile ? (
-        <Box id="work" sx={{ width: "70%", margin: "auto", marginBottom: "2em" }}>
+        <Box id="work" sx={{ width: "70%", margin: "auto", marginBottom: "4em" }}>
           <Typography
             gutterBottom
             component="h3"
@@ -172,7 +172,7 @@ function Work() {
           </Box>
         </Box>
       ) : (
-        <Box id="work" sx={{ width: "100%" }}>
+        <Box id="work" sx={{ width: "100%", marginBottom: "3em" }}>
           <Typography
             gutterBottom
             component="h3"
