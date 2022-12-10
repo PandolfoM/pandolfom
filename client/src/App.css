@@ -1,0 +1,57 @@
+:root {
+  --main-color: #12171d;
+  --main2-color: #151b22;
+  --card-color: #232a33;
+  --secondary-color: #008ae6;
+  --secondary-color-transparent: rgba(0, 138, 230, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbtn > a {
+  color: white;
+  margin: 20px 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbtn > a > p {
+  font-weight: 500;
+  padding-right: 15px;
+}
+
+/* Work */
+.MuiCard-root{
+  display: flex;
+  flex-direction: column;
+}
+
+.MuiCardActions-root{
+   margin-top: auto;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.MuiTypography-body2 {
+  padding-right: 1px;
+}
+
+.MuiFormLabel-asterisk {
+  color: red;
+}

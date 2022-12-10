@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Fomo Mock Exchange",
+    "description": "A real time stock exchange for people who just want to mess around with stocks and not use real currency.",
+    "image": "https://i.imgur.com/LkB2qqN.png",
+    "github": "https://github.com/RynMrphy18/fomo-mock-exchange",
+    "site": "https://fomo-exchange.herokuapp.com/"
+  },
+  {
+    "title": "Attitudes Hair Design",
+    "description": "An informational website for the business Attitudes Hair Design.",
+    "image": "https://i.imgur.com/7AS93ne.jpeg",
+    "github": "https://github.com/PandolfoM/attitudes-hair",
+    "site": "https://attitudes-hair.herokuapp.com/"
+  },
+  {
+    "title": "Emprise",
+    "description": "A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast.",
+    "image": "https://i.imgur.com/b93hFE7.png",
+    "github": "https://github.com/codemasterdev/Emprise",
+    "site": "https://codemasterdev.github.io/Emprise/"
+  },
+
+  {
+    "title": "Half Foods",
+    "description": "Online grocery store where you can buy items to pickup in store later.",
+    "image": "https://raw.githubusercontent.com/PandolfoM/half-foods/main/halffoods.jpeg",
+    "github": "https://github.com/PandolfoM/half-foods",
+    "site": "https://half-foods.herokuapp.com/"
+  },
+  {
+    "title": "Tech Blog",
+    "description": "Tech blog is a blog where you can sign up and start posting anything you would like other people to see.",
+    "image": "https://i.imgur.com/Lw44Dce.png",
+    "github": "https://github.com/PandolfoM/tech-blog",
+    "site": "https://desolate-forest-49599.herokuapp.com/"
+  },
+  {
+    "title": "Weather Dashboard",
+    "description": "Weather Dashboard is an app where you can search a city of your choice and it will bring up the 5 day forecast, temperature, wind speed, humidity, and UV index.",
+    "image": "https://i.imgur.com/d0kFw8L.png",
+    "github": "https://github.com/PandolfoM/weather-dashboard",
+    "site": "https://pandolfom.github.io/weather-dashboard/"
+  }
+]
