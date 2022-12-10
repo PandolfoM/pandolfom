@@ -92,7 +92,7 @@ function Contact() {
       email: email.value,
       message: message.value,
     };
-    const response = await fetch("http://localhost:5000/submitForm", {
+    const response = await fetch("/submitForm", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

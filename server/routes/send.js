@@ -7,7 +7,6 @@ router.post("/submitForm", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const message = req.body.message;
-  console.log(req.body);
   const mail = {
     from: "Portfolio Contact Form<matt@pandolfo.com>",
     to: process.env.EMAIL,
