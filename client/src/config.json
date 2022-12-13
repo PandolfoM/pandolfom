@@ -1,17 +1,31 @@
 [
   {
-    "title": "Fomo Mock Exchange",
-    "description": "A real time stock exchange for people who just want to mess around with stocks and not use real currency.",
-    "image": "https://i.imgur.com/LkB2qqN.png",
-    "github": "https://github.com/RynMrphy18/fomo-mock-exchange",
-    "site": "https://fomo-exchange.herokuapp.com/"
+    "title": "Tipity - Tip Calculator",
+    "description": "Tipity is an easily accessible app to calculate your tip and split a bill in seconds.",
+    "image": "https://i.imgur.com/0eKLaTy.jpeg",
+    "github": "https://github.com/PandolfoM/tip-calculator",
+    "site": "https://apps.apple.com/us/app/tipity-tip-calculator/id6444921554"
   },
   {
     "title": "Attitudes Hair Design",
     "description": "An informational website for the business Attitudes Hair Design.",
     "image": "https://i.imgur.com/7AS93ne.jpeg",
     "github": "https://github.com/PandolfoM/attitudes-hair",
-    "site": "https://attitudes-hair.herokuapp.com/"
+    "site": "attitudes-hair-production.up.railway.app"
+  },
+  {
+    "title": "MJP Systems",
+    "description": "Business website for a family buisness MJP Systems.",
+    "image": "https://i.imgur.com/Kgekv76.jpeg",
+    "github": "https://github.com/PandolfoM/mjp-systems",
+    "site": "https://mjp-systems-production.up.railway.app/"
+  },
+  {
+    "title": "Fomo Mock Exchange",
+    "description": "A real time stock exchange for people who just want to mess around with stocks and not use real currency.",
+    "image": "https://i.imgur.com/LkB2qqN.png",
+    "github": "https://github.com/RynMrphy18/fomo-mock-exchange",
+    "site": "https://fomo-exchange.herokuapp.com/"
   },
   {
     "title": "Emprise",
@@ -27,19 +41,5 @@
     "image": "https://raw.githubusercontent.com/PandolfoM/half-foods/main/halffoods.jpeg",
     "github": "https://github.com/PandolfoM/half-foods",
     "site": "https://half-foods.herokuapp.com/"
-  },
-  {
-    "title": "Tech Blog",
-    "description": "Tech blog is a blog where you can sign up and start posting anything you would like other people to see.",
-    "image": "https://i.imgur.com/Lw44Dce.png",
-    "github": "https://github.com/PandolfoM/tech-blog",
-    "site": "https://desolate-forest-49599.herokuapp.com/"
-  },
-  {
-    "title": "Weather Dashboard",
-    "description": "Weather Dashboard is an app where you can search a city of your choice and it will bring up the 5 day forecast, temperature, wind speed, humidity, and UV index.",
-    "image": "https://i.imgur.com/d0kFw8L.png",
-    "github": "https://github.com/PandolfoM/weather-dashboard",
-    "site": "https://pandolfom.github.io/weather-dashboard/"
   }
 ]
