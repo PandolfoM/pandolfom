@@ -87,16 +87,16 @@ function About() {
                 borderRadius: "3px",
               }}
             />
-            <Typography
-              component={"div"}
-              variant="p"
-              sx={{ textAlign: "justify" }}>
-              Hello, my name is Matthew Pandolfo! I am a 19-year-old Full Stack
-              Web Developer. I graduated from the UConn Coding Bootcamp in
-              December of 2021, where I am now looking for positions to start my
-              career. During the 24-week coding boot camp I learned various
-              languages, libraries, and frameworks, such as JavaScript, HTML,
-              CSS, React, MongoDB, Express, MySQL, GraphQL, and many more.
+            <Typography component={"div"} variant="p" sx={{}}>
+              I'm Matthew Pandolfo, a recent graduate from the UConn Coding
+              Bootcamp with a passion for Full Stack Web Development. With a
+              focus on expanding my skillset and knowledge base, I have honed my
+              abilities in a wide range of technologies including JavaScript,
+              HTML, CSS, React, MongoDB, Express, MySQL, GraphQL, and more. I am
+              eager to put my newly acquired skills to work and am actively
+              seeking opportunities to start my career as a Full Stack Web
+              Developer. I am a continuous learner and always strive to expand
+              my knowledge and expertise in the field.
             </Typography>
           </CardContent>
         </Card>
@@ -104,6 +104,9 @@ function About() {
           sx={{
             textAlign: "center",
             marginTop: "30px",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
             a: {
               margin: "0 10px",
               opacity: "40%",
@@ -118,10 +121,20 @@ function About() {
               opacity: "100%",
             },
           }}>
-          <Typography component={"a"} variant="a" href="https://www.linkedin.com/in/matthew-pandolfo-22b6b1192/" target="_blank" sx={{ fontFamily: "Source Sans Pro, sans-serif", fontWeight: "600" }}>
+          <Typography
+            component={"a"}
+            variant="a"
+            href="https://www.linkedin.com/in/matthew-pandolfo-22b6b1192/"
+            target="_blank"
+            sx={{ fontWeight: "700" }}>
             Linkedin
           </Typography>
-          <Typography component={"a"} variant="a" href="https://github.com/PandolfoM" target="_blank" sx={{fontFamily: "Oxygen, sans-serif", fontWeight: "600"}}>
+          <Typography
+            component={"a"}
+            variant="a"
+            href="https://github.com/PandolfoM"
+            target="_blank"
+            sx={{ fontWeight: "700" }}>
             GitHub
           </Typography>
         </Box>

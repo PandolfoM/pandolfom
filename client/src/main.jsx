@@ -4,6 +4,11 @@ import App from "./App";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
+import JetBrainsMonoMedium from "./fonts/jetbrainsmono-medium-webfont.woff";
+import JetBrainsMonoMedium2 from "./fonts/jetbrainsmono-medium-webfont.woff2";
+import JetBrainsMonoBold from "./fonts/jetbrainsmono-bold-webfont.woff";
+import JetBrainsMonoBold2 from "./fonts/jetbrainsmono-bold-webfont.woff2";
+
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -18,6 +23,25 @@ const darkTheme = createTheme({
     },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+        @font-face {
+          font-family: "jetbrains_monomedium";
+          src: url(${JetBrainsMonoMedium}) format("woff2"),
+            url(${JetBrainsMonoMedium2}) format("woff");
+          font-weight: 500;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: "jetbrains_monobold";
+          src: url(${JetBrainsMonoBold}) format("woff2"),
+            url(${JetBrainsMonoBold2}) format("woff");
+          font-weight: 700;
+          font-style: normal;
+        }
+      `,
+    },
     MuiCard: {
       styleOverrides: {
         root: {
@@ -32,6 +56,12 @@ const darkTheme = createTheme({
         },
       },
     },
+  },
+  typography: {
+    fontFamily: [
+      "jetbrains_monobold, monospace",
+      "jetbrains_monomedium, monospace",
+    ].join(","),
   },
 });
 

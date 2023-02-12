@@ -57,7 +57,7 @@ function DesktopNav() {
       }
     }
   }, [state]);
-  
+
   return (
     <Box
       sx={{

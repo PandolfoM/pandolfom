@@ -2,7 +2,7 @@
   {
     "title": "Tipity - Tip Calculator",
     "description": "Tipity is an easily accessible app to calculate your tip and split a bill in seconds.",
-    "image": "https://i.imgur.com/0eKLaTy.jpeg",
+    "image": "https://i.imgur.com/4ZRbjMJ.png",
     "github": "https://github.com/PandolfoM/tip-calculator",
     "site": "https://apps.apple.com/us/app/tipity-tip-calculator/id6444921554"
   },
@@ -28,11 +28,11 @@
     "site": "https://fomo-exchange.herokuapp.com/"
   },
   {
-    "title": "Emprise",
-    "description": "A browser based flight search app that allows a user to select the their origin, destination, start and end date of a trip. Based on the entered inputs the user will see information for the lowest price flights and the current 5 day weather forecast.",
-    "image": "https://i.imgur.com/b93hFE7.png",
-    "github": "https://github.com/codemasterdev/Emprise",
-    "site": "https://codemasterdev.github.io/Emprise/"
+    "title": "Trackify - Inventory Tracker",
+    "description": "Trackify is an iOS app made for users to keep track of their belongings with how many they have and a picture to show what the item is.",
+    "image": "https://i.imgur.com/ofHJiSW.png",
+    "github": "https://github.com/PandolfoM/InventoryApp",
+    "site": "https://apps.apple.com/us/app/stockify-inventory-tracker/id1664242567"
   },
 
   {

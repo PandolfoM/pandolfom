@@ -31,12 +31,15 @@ function Hero() {
         alignItems: "center",
         textAlign: "center",
         color: "white",
-        marginBottom: "10em"
+        marginBottom: "10em",
       }}>
       <Box component={"div"}>
         <Typography
           component="h1"
-          sx={{ fontSize: "5em", marginBottom: "0.5em" }}>
+          sx={{
+            fontSize: "5em",
+            marginBottom: "0.5em",
+          }}>
           Matthew Pandolfo
         </Typography>
         <Typography component="h2" sx={{ fontSize: "2em", opacity: "0.5" }}>

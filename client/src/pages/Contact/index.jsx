@@ -128,12 +128,9 @@ function Contact() {
       <Paper
         sx={{
           color: "white",
-          width: "90%",
+          width: { xs: "100%", md: "90%" },
         }}>
-        <Grid
-          container={mobileData.container}
-          spacing={2}
-          sx={{ padding: "24px" }}>
+        <Grid container={mobileData.container} sx={{ padding: "24px" }}>
           <Grid item sm={9}>
             <Typography component={"h1"} sx={{ fontSize: "2em" }}>
               Contact Me
@@ -220,7 +217,11 @@ function Contact() {
                   type="submit"
                   variant="contained"
                   endIcon={<SendIcon />}
-                  sx={{ margin: "15px 0", width: "150px", float: "right" }}>
+                  sx={{
+                    margin: "15px 0",
+                    width: { xs: "100%", md: "150px" },
+                    float: "right",
+                  }}>
                   {status}
                 </Button>
               </Box>
