@@ -108,12 +108,13 @@ function About() {
             flexWrap: "wrap",
             justifyContent: "center",
             a: {
-              margin: "0 10px",
-              opacity: "40%",
-              color: "gray",
-              transition: "all .3s linear",
-              textDecoration: "none",
+              fontWeight: "700",
               fontSize: "50px",
+              margin: "0 10px",
+              color: "gray",
+              opacity: "40%",
+              textDecoration: "none",
+              transition: "all .3s ease",
               cursor: "pointer",
             },
             "a:hover": {
@@ -125,16 +126,14 @@ function About() {
             component={"a"}
             variant="a"
             href="https://www.linkedin.com/in/matthew-pandolfo-22b6b1192/"
-            target="_blank"
-            sx={{ fontWeight: "700" }}>
+            target="_blank">
             Linkedin
           </Typography>
           <Typography
             component={"a"}
             variant="a"
             href="https://github.com/PandolfoM"
-            target="_blank"
-            sx={{ fontWeight: "700" }}>
+            target="_blank">
             GitHub
           </Typography>
         </Box>

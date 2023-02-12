@@ -71,7 +71,7 @@ function Contact() {
       await addDoc(collection(db, "mail"), {
         to: "matt@pandolfo.com",
         message: {
-          subject: "Portfolio contact",
+          subject: `${name.value}`,
           html: `
             <p>Name: ${name.value}</p>
             <p>Email: ${email.value}</p>
@@ -80,16 +80,14 @@ function Contact() {
         },
       });
       setTimeout(() => {
-        setStatus("Sent!");
-        setSentAlert(true);
-        e.target.reset();
-      }, 5000);
-      setStatus("Send");
-    } catch (error) {
-      setTimeout(() => {
-        setStatus("Error!");
+        setStatus("Send");
         setSentAlert(false);
       }, 5000);
+      setStatus("Sent!");
+      setSentAlert(true);
+      e.target.reset();
+    } catch (error) {
+      setStatus("Error!");
     }
   };
 
