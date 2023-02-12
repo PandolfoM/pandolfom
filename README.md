@@ -26,7 +26,7 @@ Matthew Pandolfo's Portfolio
 
 ## Site Preview
 
-![Preview](./client/src/assets/preview.png)
+![Preview](./src/assets/preview.png)
 
 ## Contribution
 
