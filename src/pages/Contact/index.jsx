@@ -21,7 +21,7 @@ import { useDispatch } from "react-redux";
 import SendIcon from "@mui/icons-material/Send";
 import { addDoc, collection } from "firebase/firestore";
 
-import { db } from "../../../firebaseConfig";
+import { db } from "../../firebaseConfig";
 import { UPDATE_VIEW } from "../../utils/actions";
 import useIsInViewport from "../../utils/isInViewport";
 

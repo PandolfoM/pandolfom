@@ -6,12 +6,12 @@ import {
   CardContent,
   CardMedia,
   useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import pic from "../../assets/me.png";
 import useIsInViewport from "../../utils/isInViewport";
 import { useDispatch } from "react-redux";
 import { UPDATE_VIEW } from "../../utils/actions";
-import { useTheme } from "@emotion/react";
 
 function About() {
   const theme = useTheme();
