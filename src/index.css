@@ -4,7 +4,7 @@
 
 :root {
   font-family: "JetBrains Mono", monospace;
-  --bg-color: rgb(0, 4, 0);
+  --bg-color: rgb(1, 11, 1);
 }
 
 /* Document
@@ -29,6 +29,7 @@ html {
 
 body {
   margin: 0;
+  background-color: var(--bg-color);
 }
 
 /**

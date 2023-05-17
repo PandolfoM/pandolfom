@@ -1,0 +1,11 @@
+.spotlight {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(
+    circle at var(--xPos) var(--yPos),
+    transparent 10%,
+    rgba(0, 0, 0, 0.8) 40%
+  );
+  transition-timing-function: ease;
+}

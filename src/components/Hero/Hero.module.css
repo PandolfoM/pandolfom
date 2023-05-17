@@ -25,6 +25,7 @@
 }
 
 .typing_1::before {
+  background-color: var(--bg-color);
   animation: typewriter var(--time) steps(var(--characters)) 1s forwards;
   animation-play-state: var(--paused);
 }
