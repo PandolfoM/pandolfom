@@ -1,0 +1,59 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  gap: 1rem;
+}
+
+.typing_1 {
+  color: limegreen;
+  font-size: 3rem;
+  position: relative;
+  user-select: none;
+}
+
+.typing_1::before,
+.typing_1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.typing_1::before {
+  background-color: var(--bg-color);
+  animation: typewriter var(--time) steps(var(--characters)) 1s forwards;
+  animation-play-state: var(--paused);
+}
+
+.typing_1::after {
+  width: 0.075em;
+  background-color: limegreen;
+  animation: typewriter var(--time) steps(var(--characters)) 1s forwards
+      var(--paused),
+    blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
