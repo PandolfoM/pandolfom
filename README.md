@@ -8,7 +8,6 @@ Matthew Pandolfo's Portfolio
   - [Table of Contents](#table-of-contents)
   - [Built With](#built-with)
   - [Website](#website)
-  - [Site Preview](#site-preview)
   - [Contribution](#contribution)
   - [License](#license)
 
@@ -23,10 +22,6 @@ Matthew Pandolfo's Portfolio
 ## Website
 
 [Deployed Portfolio](https://mattpandolfo.com/)
-
-## Site Preview
-
-![Preview](./src/assets/preview.png)
 
 ## Contribution
 
