@@ -8,7 +8,7 @@
   },
   {
     "title": "MJP Web Solutions",
-    "description": "A website for a business that creates websites for clients.",
+    "description": "A website for a business that develops websites for clients.",
     "image": "https://i.imgur.com/lxw6n5K.png",
     "github": "https://github.com/PandolfoM/mjp-web-solutions",
     "site": "https://mjpwebsolutions.mjphub.com/"
@@ -34,12 +34,11 @@
     "github": "https://github.com/PandolfoM/InventoryApp",
     "site": "https://apps.apple.com/us/app/stockify-inventory-tracker/id1664242567"
   },
-
   {
-    "title": "Half Foods",
-    "description": "Online grocery store where you can buy items to pickup in store later.",
-    "image": "https://raw.githubusercontent.com/PandolfoM/half-foods/main/halffoods.jpeg",
-    "github": "https://github.com/PandolfoM/half-foods",
-    "site": "https://half-foods.herokuapp.com/"
+    "title": "Heena Kapadia",
+    "description": "Informational site for a law firm.",
+    "image": "https://kappa.lol/gwpNCl",
+    "github": "https://github.com/PandolfoM/heena-kapadia",
+    "site": "https://www.heenakapadialaw.com/"
   }
 ]
