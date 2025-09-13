@@ -1,6 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -66,9 +73,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html
+      lang="en"
+      className="dark h-full pt-[172px] px-4 max-w-[1200px] m-auto lg:pt-28">
       <body
-        className={`${jetBrainsMono.variable} ${jetBrainsMono.className} antialiased`}>
+        className={`${inter.variable} ${inter.className} ${jetBrainsMono.variable} antialiased h-full`}>
+        <Navbar />
+        <span className="pt-[160px] lg:pt-[260px]" />
         {children}
       </body>
     </html>
