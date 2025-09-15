@@ -16,29 +16,29 @@ function Navbar() {
             href="/"
             className="flex text-sm items-center gap-2 cursor-pointer transition-all duration-300 ease-in-out hover:scale-105">
             <span className="w-1 h-1 bg-accent rounded-full"></span>
-            <p className="text-xs">Matthew Pandolfo</p>
+            <p className="text-xs text-white/50">Matthew Pandolfo</p>
           </Link>
 
           {/* icon */}
           <div
             className={cn(
-              "relative w-6 h-4 cursor-pointer transition-all duration-500 ease-in-out translate-y-0 rotate-0 will-change-auto lg:hidden",
+              "relative w-6 h-4 cursor-pointer transition-all duration-500 ease-in-out translate-y-0 rotate-0 will-change-auto opacity-75 lg:hidden",
               isOpen && "rotate-180"
             )}
             onClick={toggleMenu}>
             <div
               className={cn(
-                "top-[10%] absolute left-1/2 w-full h-px bg-white opacity-75 transition-all duration-500 -translate-x-1/2 -translate-y-1/2 will-change-auto",
+                "top-[10%] absolute left-1/2 w-full h-px bg-white transition-all duration-500 -translate-x-1/2 -translate-y-1/2 will-change-auto",
                 isOpen && "top-[50%] -rotate-45"
               )}></div>
             <div
               className={cn(
-                "top-[50%] absolute left-1/2 w-full h-px bg-white opacity-75 transition-all duration-500 -translate-x-1/2 -translate-y-1/2 will-change-auto",
+                "top-[50%] absolute left-1/2 w-full h-px bg-white transition-all duration-500 -translate-x-1/2 -translate-y-1/2 will-change-auto",
                 isOpen && "opacity-0"
               )}></div>
             <div
               className={cn(
-                "top-[90%] absolute left-1/2 w-full h-px bg-white opacity-75 transition-all duration-500 -translate-x-1/2 -translate-y-1/2 will-change-auto",
+                "top-[90%] absolute left-1/2 w-full h-px bg-white transition-all duration-500 -translate-x-1/2 -translate-y-1/2 will-change-auto",
                 isOpen && "top-[50%] rotate-45"
               )}></div>
           </div>

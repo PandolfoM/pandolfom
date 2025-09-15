@@ -21,7 +21,11 @@ function Hero() {
       </div>
       <div className="flex gap-2.5 flex-wrap">
         <Button>Learn More</Button>
-        <Button variant="outline">Resume</Button>
+        <Button
+          variant="outline"
+          onClick={() => window.open("/matthew-pandolfo.pdf", "_blank")}>
+          Resume
+        </Button>
       </div>
     </section>
   );
