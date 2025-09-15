@@ -79,7 +79,6 @@ export default function RootLayout({
       className="dark h-full pt-[172px] px-4 max-w-[1200px] m-auto lg:pt-28 cursor-none">
       <body
         className={`${inter.variable} ${inter.className} ${jetBrainsMono.variable} antialiased h-full`}>
-        {/* <TargetCursor /> */}
         <MagneticCursor />
         <Navbar />
         <span className="pt-[160px] lg:pt-[260px]" />
