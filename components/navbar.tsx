@@ -22,7 +22,7 @@ function Navbar() {
           {/* icon */}
           <div
             className={cn(
-              "relative w-6 h-4 cursor-pointer transition-all duration-500 ease-in-out translate-y-0 rotate-0 will-change-auto opacity-75 lg:hidden",
+              "relative w-6 h-4 transition-all duration-500 ease-in-out translate-y-0 rotate-0 will-change-auto opacity-75 expand-target expand m-2 lg:hidden",
               isOpen && "rotate-180"
             )}
             onClick={toggleMenu}>
