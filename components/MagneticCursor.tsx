@@ -12,6 +12,22 @@ const MagneticCursor: React.FC = () => {
   const [isActive, setIsActive] = useState<"expand" | "active" | "inactive">(
     "inactive"
   );
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Basic mobile detection (user agent)
+    const checkMobile = () => {
+      if (typeof window !== "undefined") {
+        const ua = navigator.userAgent;
+        setIsMobile(
+          /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            ua
+          )
+        );
+      }
+    };
+    checkMobile();
+  }, []);
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
   const cursorWidth = useMotionValue(32);
@@ -30,6 +46,7 @@ const MagneticCursor: React.FC = () => {
   });
 
   useEffect(() => {
+    if (isMobile) return;
     const moveCursor = (e: MouseEvent) => {
       let target = null;
       let expandTarget = null;
@@ -43,7 +60,6 @@ const MagneticCursor: React.FC = () => {
       }
       if (expandTarget) {
         const rect = expandTarget.getBoundingClientRect();
-        // Expand cursor to fixed size and make it transparent
         cursorWidth.set(48);
         cursorHeight.set(48);
         cursorRadius.set(24);
@@ -52,26 +68,20 @@ const MagneticCursor: React.FC = () => {
         setIsActive("expand");
       } else if (target) {
         const rect = target.getBoundingClientRect();
-        // Morph cursor to target's shape and size
         cursorWidth.set(rect.width);
         cursorHeight.set(rect.height);
-        // Detect border radius from computed style
         const computedRadius = window.getComputedStyle(target).borderRadius;
-        // Try to parse as pixel value, fallback to circle if not
         let radiusValue = 0;
         if (computedRadius.endsWith("px")) {
           radiusValue = parseFloat(computedRadius);
         } else if (computedRadius.endsWith("%")) {
-          // If percent, use percent of max dimension
           radiusValue =
             Math.max(rect.width, rect.height) *
             (parseFloat(computedRadius) / 100);
         } else {
-          // Fallback to circle
           radiusValue = Math.max(rect.width, rect.height) / 2;
         }
         cursorRadius.set(radiusValue);
-        // Snap cursor to center of target, offset by half cursor size
         mouseX.set(rect.left + rect.width / 2 - rect.width / 2);
         mouseY.set(rect.top + rect.height / 2 - rect.height / 2);
         setIsActive("active");
@@ -79,7 +89,6 @@ const MagneticCursor: React.FC = () => {
         cursorWidth.set(23);
         cursorHeight.set(23);
         cursorRadius.set(16);
-        // Snap cursor to mouse, offset by half default size
         mouseX.set(e.clientX - 16);
         mouseY.set(e.clientY - 16);
         setIsActive("inactive");
@@ -87,8 +96,9 @@ const MagneticCursor: React.FC = () => {
     };
     window.addEventListener("mousemove", moveCursor);
     return () => window.removeEventListener("mousemove", moveCursor);
-  }, [cursorHeight, cursorRadius, cursorWidth, mouseX, mouseY]);
+  }, [cursorHeight, cursorRadius, cursorWidth, mouseX, mouseY, isMobile]);
 
+  if (isMobile) return null;
   return (
     <motion.div
       ref={cursorRef}

@@ -23,26 +23,22 @@ interface CardProps extends CardData {
 const projects: CardData[] = [
   {
     title: "Projects",
-    // src: "https://picsum.photos/200/300",
     url: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
     content: `<p>Hi</p>`,
     color: "bg-accent",
   },
   {
     title: "About",
-    src: "https://picsum.photos/200/300",
     url: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
     color: "bg-background",
   },
   {
     title: "Let's Chat",
-    src: "https://picsum.photos/200/300",
     url: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
     color: "bg-accent",
   },
   {
     title: "Socials",
-    src: "https://picsum.photos/200/300",
     url: "https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/",
     color: "bg-background",
   },
