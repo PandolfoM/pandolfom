@@ -87,7 +87,7 @@ const MagneticCursor: React.FC = () => {
     };
     window.addEventListener("mousemove", moveCursor);
     return () => window.removeEventListener("mousemove", moveCursor);
-  }, [mouseX, mouseY]);
+  }, [cursorHeight, cursorRadius, cursorWidth, mouseX, mouseY]);
 
   return (
     <motion.div
@@ -98,7 +98,7 @@ const MagneticCursor: React.FC = () => {
           ? "bg-accent/30 border-accent"
           : isActive === "active"
           ? "bg-accent/10 border-accent"
-          : "bg-accent border-none"
+          : "bg-accent border-none shadow-[0_0_5px_0] shadow-background"
       )}
       style={{
         x: springX,
