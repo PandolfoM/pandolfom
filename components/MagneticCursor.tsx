@@ -5,7 +5,7 @@ import { motion, useMotionValue, useSpring } from "motion/react";
 import { cn } from "@/lib/utils";
 // List of selectors for magnetic targets
 const MAGNETIC_SELECTORS = [".magnetic-target"];
-const EXPAND_SELECTORS = [".expand-target"];
+const ICON_SELECTORS = [".expand-target"];
 
 const MagneticCursor: React.FC = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -49,22 +49,24 @@ const MagneticCursor: React.FC = () => {
     if (isMobile) return;
     const moveCursor = (e: MouseEvent) => {
       let target = null;
-      let expandTarget = null;
+      let iconTarget = null;
       for (const selector of MAGNETIC_SELECTORS) {
         target = (e.target as HTMLElement).closest(selector);
         if (target) break;
       }
-      for (const selector of EXPAND_SELECTORS) {
-        expandTarget = (e.target as HTMLElement).closest(selector);
-        if (expandTarget) break;
+      for (const selector of ICON_SELECTORS) {
+        iconTarget = (e.target as HTMLElement).closest(selector);
+        if (iconTarget) break;
       }
-      if (expandTarget) {
-        const rect = expandTarget.getBoundingClientRect();
-        cursorWidth.set(48);
-        cursorHeight.set(48);
-        cursorRadius.set(24);
-        mouseX.set(rect.left + rect.width / 2 - 24);
-        mouseY.set(rect.top + rect.height / 2 - 24);
+      if (iconTarget) {
+        const rect = iconTarget.getBoundingClientRect();
+        const newWidth = rect.width + 15;
+        const newHeight = rect.height + 15;
+        cursorWidth.set(newWidth);
+        cursorHeight.set(newHeight);
+        cursorRadius.set(Math.max(newWidth, newHeight) / 2);
+        mouseX.set(rect.left + rect.width / 2 - newWidth / 2);
+        mouseY.set(rect.top + rect.height / 2 - newHeight / 2);
         setIsActive("expand");
       } else if (target) {
         const rect = target.getBoundingClientRect();
