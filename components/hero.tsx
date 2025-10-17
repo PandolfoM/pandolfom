@@ -33,9 +33,9 @@ function Hero() {
       <div className="relative pb-2">
         <motion.div
           className="w-full h-8 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          animate={{ opacity: [0.05, 0.15, 0.5, 0.015, 0.05, 0.05, 0.05] }}
+          animate={{ opacity: [0.05, 0.15, 0.5, 0.15, 0.05, 0.05, 0.05] }}
           transition={{
-            duration: 2,
+            duration: 2.5,
             repeat: Infinity,
             ease: "easeInOut",
           }}>
@@ -43,9 +43,9 @@ function Hero() {
         </motion.div>
         <motion.div
           className="w-full h-8"
-          animate={{ opacity: [0.05, 0.05, 0.15, 0.5, 0.15, 0.05, 0.05] }}
+          animate={{ opacity: [0.05, 0.05, 0.05, 0.15, 0.5, 0.15, 0.05, 0.05] }}
           transition={{
-            duration: 2,
+            duration: 2.5,
             repeat: Infinity,
             ease: "easeInOut",
           }}>
@@ -53,9 +53,11 @@ function Hero() {
         </motion.div>
         <motion.div
           className="w-full h-8 absolute top-0 left-1/2 -translate-x-1/2 translate-y-1/2"
-          animate={{ opacity: [0.05, 0.05, 0.05, 0.15, 0.5, 0.15, 0.05] }}
+          animate={{
+            opacity: [0.05, 0.05, 0.05, 0.05, 0.05, 0.15, 0.5, 0.15, 0.05],
+          }}
           transition={{
-            duration: 2,
+            duration: 2.5,
             repeat: Infinity,
             ease: "easeInOut",
           }}>
@@ -65,11 +67,12 @@ function Hero() {
           className="w-full h-8"
           animate={{
             opacity: [
-              0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.15, 0.5, 0.15, 0.05,
+              0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.15, 0.5,
+              0.15, 0.05,
             ],
           }}
           transition={{
-            duration: 2,
+            duration: 2.5,
             repeat: Infinity,
             ease: "easeInOut",
           }}>
