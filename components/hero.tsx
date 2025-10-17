@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 function Hero() {
   return (
-    <section className="flex flex-col justify-between h-full">
+    <section className="flex flex-col flex-1 justify-between h-full">
       <div className="flex flex-col gap-8 flex-1">
         <h1 className="text-5xl/snug font-bold tracking-tight">
           Hello
