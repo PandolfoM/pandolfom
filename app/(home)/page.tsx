@@ -101,6 +101,29 @@ export default function Home() {
             ))}
           </CardContent>
         </Card>
+        <Card>
+          <CardHeader className="flex items-center">
+            <CardTitle className="flex items-center">Contact</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-wrap gap-6">
+            <div className="flex flex-col gap-1">
+              <AppLink href="/matthew-pandolfo.pdf">Resume</AppLink>
+              <p className="text-white/50">View my resume</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <AppLink href="https://www.linkedin.com/in/matthew-pandolfo/">
+                LinkedIn
+              </AppLink>
+              <p className="text-white/50">Connect with me</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <AppLink href="/contact" target="_self">
+                Contact
+              </AppLink>
+              <p className="text-white/50">Get in touch</p>
+            </div>
+          </CardContent>
+        </Card>
       </section>
     </section>
   );
