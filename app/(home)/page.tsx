@@ -27,6 +27,7 @@ type DataProps = {
 
 export default function Home() {
   const [data, setData] = useState<DataProps | null>(null);
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -51,7 +52,7 @@ export default function Home() {
       </div>
       <section className="flex flex-col gap-8">
         {/* About */}
-        <Card>
+        <Card id="about">
           <CardHeader className="flex items-center">
             <CardTitle className="flex items-center gap-2.5">
               <Image src={me} alt="matthew pandolfo" width={40} />
@@ -64,7 +65,7 @@ export default function Home() {
         </Card>
 
         {/* Experience */}
-        <Card>
+        <Card id="experience">
           <CardHeader className="flex items-center">
             <CardTitle className="flex items-center">Experience</CardTitle>
           </CardHeader>
@@ -88,7 +89,7 @@ export default function Home() {
         </Card>
 
         {/* Projects */}
-        <Card>
+        <Card id="projects">
           <CardHeader className="flex items-center">
             <CardTitle className="flex items-center">Projects</CardTitle>
           </CardHeader>
@@ -101,7 +102,7 @@ export default function Home() {
             ))}
           </CardContent>
         </Card>
-        <Card>
+        <Card id="contact">
           <CardHeader className="flex items-center">
             <CardTitle className="flex items-center">Contact</CardTitle>
           </CardHeader>

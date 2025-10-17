@@ -5,11 +5,13 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Dot from "@/components/dot";
-import { ArrowUpRight } from "lucide-react";
+import AppLink from "./link";
+import { useRouter } from "next/navigation";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleMenu = () => setIsOpen(!isOpen);
+  const router = useRouter();
 
   return (
     <nav
@@ -33,7 +35,10 @@ function Navbar() {
           </Link>
 
           <div className="flex items-center gap-2">
-            <Button size="xs" variant="outline">
+            <Button
+              size="xs"
+              variant="outline"
+              onClick={() => router.push("/contact")}>
               Contact Me
             </Button>
             {/* icon */}
@@ -65,39 +70,41 @@ function Navbar() {
           <Button
             size="xs"
             variant="link"
-            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1">
+            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1"
+            onClick={() => router.push("/#about")}>
             About
           </Button>
           <Button
             size="xs"
             variant="link"
-            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1">
+            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1"
+            onClick={() => router.push("/#experience")}>
             Experience
           </Button>
           <Button
             size="xs"
             variant="link"
-            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1">
+            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1"
+            onClick={() => router.push("/#projects")}>
             Projects
           </Button>
           <Button
             size="xs"
             variant="link"
-            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1">
+            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1"
+            onClick={() => router.push("/#contact")}>
             Contact
           </Button>
-          <Button
-            size="xs"
-            variant="link"
-            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1">
-            Resume <ArrowUpRight size={16} />
-          </Button>
-          <Button
-            size="xs"
-            variant="link"
-            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1">
-            LinkedIn <ArrowUpRight size={16} />
-          </Button>
+          <AppLink
+            className="text-white/50 text-sm"
+            href="/matthew-pandolfo.pdf">
+            Resume
+          </AppLink>
+          <AppLink
+            className="text-white/50 text-sm"
+            href="https://www.linkedin.com/in/matthew-pandolfo/">
+            LinkedIn
+          </AppLink>
         </div>
       </div>
     </nav>

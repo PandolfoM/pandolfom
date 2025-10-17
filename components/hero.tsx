@@ -2,8 +2,11 @@ import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 function Hero() {
+  const router = useRouter();
+
   return (
     <section className="flex flex-col flex-1 justify-between h-full">
       <div className="flex flex-col gap-8 flex-1">
@@ -28,7 +31,7 @@ function Hero() {
           </Badge>
         </div>
         <div className="flex gap-2.5 flex-wrap">
-          <Button>Learn More</Button>
+          <Button onClick={() => router.push("/#about")}>Learn More</Button>
           <Button
             variant="outline"
             onClick={() => window.open("/matthew-pandolfo.pdf", "_blank")}>
