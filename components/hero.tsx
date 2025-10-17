@@ -17,9 +17,15 @@ function Hero() {
           </span>
         </h1>
         <div className="flex gap-2.5 flex-wrap">
-          <Badge variant="outline">Frontend Developer</Badge>
-          <Badge variant="outline">Junior Dev</Badge>
-          <Badge variant="outline">Rocky Hill, CT</Badge>
+          <Badge variant="outline" className="font-bold">
+            Frontend Developer
+          </Badge>
+          <Badge variant="outline" className="font-bold">
+            Junior Dev
+          </Badge>
+          <Badge variant="outline" className="font-bold">
+            Rocky Hill, CT
+          </Badge>
         </div>
         <div className="flex gap-2.5 flex-wrap">
           <Button>Learn More</Button>
