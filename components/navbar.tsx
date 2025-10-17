@@ -27,7 +27,9 @@ function Navbar() {
             href="/"
             className="flex text-sm items-center gap-2 transition-all duration-300 ease-in-out magnetic-target cursor-none rounded-full p-2 hover:scale-105">
             <Dot />
-            <p className="text-xs text-white/50">Matthew Pandolfo</p>
+            <p className="text-xs text-white/50 tracking-tight">
+              Matthew Pandolfo
+            </p>
           </Link>
 
           <div className="flex items-center gap-2">

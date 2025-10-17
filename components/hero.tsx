@@ -7,7 +7,7 @@ function Hero() {
   return (
     <section className="flex flex-col justify-between h-full">
       <div className="flex flex-col gap-8 flex-1">
-        <h1 className="text-5xl/snug font-bold">
+        <h1 className="text-5xl/snug font-bold tracking-tight">
           Hello
           <br />
           I&apos;m{" "}
