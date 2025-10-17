@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import MagneticCursor from "@/components/MagneticCursor";
+import Footer from "@/components/footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -81,8 +82,8 @@ export default function RootLayout({
         className={`${inter.variable} ${inter.className} ${jetBrainsMono.variable} antialiased h-full`}>
         <MagneticCursor />
         <Navbar />
-        {/* <span className="pt-[160px] lg:pt-[260px]" /> */}
         {children}
+        <Footer />
       </body>
     </html>
   );

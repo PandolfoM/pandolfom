@@ -105,7 +105,7 @@ export default function Home() {
           <CardHeader className="flex items-center">
             <CardTitle className="flex items-center">Contact</CardTitle>
           </CardHeader>
-          <CardContent className="flex flex-wrap gap-6">
+          <CardContent className="grid grid-cols-2 grid-rows-2 gap-y-6">
             <div className="flex flex-col gap-1">
               <AppLink href="/matthew-pandolfo.pdf">Resume</AppLink>
               <p className="text-white/50">View my resume</p>
