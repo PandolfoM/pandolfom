@@ -22,13 +22,23 @@
     },
     {
       "name": "Heena Kapadia",
-      "description": "Informational site for a local law firm.",
+      "description": "A modern website for a law office specializing in employee rights.",
       "link": "https://heenakapadialaw.com/"
     },
     {
       "name": "Tipity",
       "description": "Tipity is an easily accessible app to calculate your tip and split a bill in seconds.",
       "link": "https://apps.apple.com/us/app/tipity-tip-calculator/id6444921554"
+    },
+    {
+      "name": "MJP Systems",
+      "description": "MJP Systems is a technology consulting company that provides IT services and solutions to businesses of all sizes.",
+      "link": "https://mjpsystems.com/"
+    },
+    {
+      "name": "MJP Web Solutions",
+      "description": "MJP Web Solutions is a technology consulting company that provides IT services and solutions to businesses of all sizes.",
+      "link": "https://mjpwebsolutions.com/"
     }
   ]
 }
