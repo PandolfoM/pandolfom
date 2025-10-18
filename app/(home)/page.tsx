@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 
 import me from "@/app/assets/me.png";
 import backupData from "@/app/assets/data.json";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type DataProps = {
   about: string;
@@ -60,7 +61,17 @@ export default function Home() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p>{data?.about}</p>
+            {data ? (
+              <p>{data?.about}</p>
+            ) : (
+              <div className="space-y-2">
+                <Skeleton className="h-[20px] w-full rounded-full" />
+                <Skeleton className="h-[20px] w-full rounded-full" />
+                <Skeleton className="h-[20px] w-full rounded-full" />
+                <Skeleton className="h-[20px] w-full rounded-full" />
+                <Skeleton className="h-[20px] w-full rounded-full" />
+              </div>
+            )}
           </CardContent>
         </Card>
 
@@ -70,21 +81,42 @@ export default function Home() {
             <CardTitle className="flex items-center">Experience</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col gap-6">
-            {data?.experience.map((exp, i) => (
-              <div className="grid grid-cols-3" key={i}>
-                {exp.endYear ? (
-                  <p className="text-sm text-white/50">{exp.endYear}</p>
-                ) : (
-                  <Badge>Present</Badge>
-                )}
+            {data ? (
+              <>
+                {data.experience.map((exp, i) => (
+                  <div className="grid grid-cols-3 gap-3" key={i}>
+                    {exp.endYear ? (
+                      <p className="text-sm text-white/50">{exp.endYear}</p>
+                    ) : (
+                      <Badge>Present</Badge>
+                    )}
 
-                <div className="col-span-2">
-                  <p>{exp.role}</p>
-                  <p>{exp.company}</p>
-                  <p className="opacity-50">{exp.location}</p>
+                    <div className="col-span-2">
+                      <p>{exp.role}</p>
+                      <p>{exp.company}</p>
+                      <p className="opacity-50">{exp.location}</p>
+                    </div>
+                  </div>
+                ))}
+              </>
+            ) : (
+              <div className="grid grid-cols-3 gap-3">
+                <Skeleton className="h-[20px] rounded-full" />
+
+                <div className="col-span-2 space-y-2">
+                  <Skeleton className="h-[20px] rounded-full" />
+                  <Skeleton className="h-[20px] rounded-full" />
+                  <Skeleton className="h-[20px] rounded-full" />
+                </div>
+                <Skeleton className="h-[20px] rounded-full" />
+
+                <div className="col-span-2 space-y-2">
+                  <Skeleton className="h-[20px] rounded-full" />
+                  <Skeleton className="h-[20px] rounded-full" />
+                  <Skeleton className="h-[20px] rounded-full" />
                 </div>
               </div>
-            ))}
+            )}
           </CardContent>
         </Card>
 
@@ -94,14 +126,33 @@ export default function Home() {
             <CardTitle className="flex items-center">Projects</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col gap-6">
-            {data?.projects.map((proj, i) => (
-              <div className="flex flex-col gap-1" key={i}>
-                <AppLink href={proj.link}>{proj.name}</AppLink>
-                <p className="text-white/50">{proj.description}</p>
-              </div>
-            ))}
+            {data ? (
+              <>
+                {data.projects.map((proj, i) => (
+                  <div className="flex flex-col gap-1" key={i}>
+                    <AppLink href={proj.link}>{proj.name}</AppLink>
+                    <p className="text-white/50">{proj.description}</p>
+                  </div>
+                ))}
+              </>
+            ) : (
+              <>
+                <div className="space-y-2">
+                  <Skeleton className="h-[20px] w-1/3 rounded-full" />
+                  <Skeleton className="h-[20px] rounded-full" />
+                  <Skeleton className="h-[20px] rounded-full" />
+                </div>
+                <div className="space-y-2">
+                  <Skeleton className="h-[20px] w-1/3 rounded-full" />
+                  <Skeleton className="h-[20px] rounded-full" />
+                  <Skeleton className="h-[20px] rounded-full" />
+                </div>
+              </>
+            )}
           </CardContent>
         </Card>
+
+        {/* Contact */}
         <Card id="contact">
           <CardHeader className="flex items-center">
             <CardTitle className="flex items-center">Contact</CardTitle>
