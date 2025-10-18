@@ -21,10 +21,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { MailIcon } from "lucide-react";
 import Github from "@/app/assets/github.svg";
 import Linkedin from "@/app/assets/linkedin.png";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
 import Image from "next/image";
+import AppLink from "@/components/link";
+import { Spinner } from "@/components/ui/spinner";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(1, "Required"),
@@ -33,6 +36,7 @@ const formSchema = z.object({
 });
 
 function Contact() {
+  const [loading, setLoading] = useState<boolean>(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,8 +46,24 @@ function Contact() {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    try {
+      setLoading(true);
+      await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      form.reset();
+      toast.success("Message sent successfully!");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -114,12 +134,19 @@ function Contact() {
         </CardContent>
         <CardFooter>
           <Field className="gap-5">
-            <Button type="submit" form="contact-form" className="!w-fit">
+            <Button
+              type="submit"
+              form="contact-form"
+              className="!w-fit"
+              disabled={loading}>
+              {loading && <Spinner />}
               Send
             </Button>
             <Separator className="!w-2/3 m-auto" />
             <div className="flex items-center justify-center gap-5 h-7">
-              <MailIcon className="expand-target" height="28" width="28" />
+              <AppLink href="mailto:matt@pandolfo.com" showArrow={false}>
+                <MailIcon className="expand-target" height="28" width="28" />
+              </AppLink>
               <Image
                 src={Github}
                 alt="github logo"

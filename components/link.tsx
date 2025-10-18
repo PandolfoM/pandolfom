@@ -8,11 +8,13 @@ function AppLink({
   children,
   target,
   className,
+  showArrow = true,
 }: {
   href: string;
   children: React.ReactNode;
   target?: string;
   className?: string;
+  showArrow?: boolean;
 }) {
   return (
     <Link
@@ -22,7 +24,7 @@ function AppLink({
         "underline hover:no-underline expand-target cursor-none w-fit flex items-center gap-1 h-fit",
         className
       )}>
-      {children} <ArrowUpRight size={16} />
+      {children} {showArrow && <ArrowUpRight size={16} />}
     </Link>
   );
 }

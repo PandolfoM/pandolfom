@@ -105,12 +105,12 @@ const MagneticCursor: React.FC = () => {
     <motion.div
       ref={cursorRef}
       className={cn(
-        "fixed top-0 left-0 pointer-events-none z-50 transition-all transform-[-50%, -50%] border-2 border-solid",
+        "fixed top-0 left-0 pointer-events-none z-[999999999999999] transition-all transform-[-50%, -50%] border-2 border-solid",
         isActive === "expand"
           ? "bg-accent/30 border-accent"
           : isActive === "active"
-          ? "bg-accent/10 border-accent"
-          : "bg-accent border-none shadow-[0_0_5px_0] shadow-background"
+            ? "bg-accent/10 border-accent"
+            : "bg-accent border-none shadow-[0_0_5px_0] shadow-background"
       )}
       style={{
         x: springX,
