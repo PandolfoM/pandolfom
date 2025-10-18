@@ -47,7 +47,7 @@ export default function Home() {
 
   return (
     <section className="flex flex-col gap-20">
-      <div className="flex flex-col h-dvh gap-5 pt-[172px] ">
+      <div className="flex flex-col h-dvh gap-5 pt-[172px]">
         <Hero />
       </div>
       <section className="flex flex-col gap-8">
@@ -122,6 +122,10 @@ export default function Home() {
                 Contact
               </AppLink>
               <p className="text-white/50">Get in touch</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <AppLink href="https://github.com/PandolfoM">GitHub</AppLink>
+              <p className="text-white/50">Explore my work</p>
             </div>
           </CardContent>
         </Card>

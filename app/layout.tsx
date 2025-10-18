@@ -77,7 +77,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="dark h-full px-4 max-w-[1200px] m-auto lg:pt-28 cursor-none scroll-smooth">
+      className="dark h-full px-4 max-w-[1200px] m-auto lg:pt-28 cursor-none scroll-smooth overflow-x-hidden">
       <body
         className={`${inter.variable} ${inter.className} ${jetBrainsMono.variable} antialiased h-full`}>
         <MagneticCursor />
