@@ -22,7 +22,7 @@ function Navbar() {
     >
       <div
         className={cn(
-          "flex flex-col gap-4 items-start w-full h-16 p-4 overflow-hidden bg-gradient-to-t from-[rgba(9,9,9,0.7)] to-[rgba(17,17,17,0.9)] backdrop-blur-sm border border-[hsla(0,0%,100%,.06)] rounded-2xl shadow-navbar transition-[height] duration-300 ease-in-out will-change-auto",
+          "flex flex-col gap-4 items-start w-full h-16 p-4 overflow-hidden bg-gradient-to-t from-[rgba(9,9,9,0.7)] to-[rgba(17,17,17,0.9)] backdrop-blur-sm border border-[hsla(0,0%,100%,.06)] rounded-2xl shadow-navbar transition-[height] duration-300 ease-in-out will-change-auto lg:h-20 lg:justify-center",
           isOpen && "h-64"
         )}
       >
@@ -32,7 +32,7 @@ function Navbar() {
             className="flex text-sm items-center gap-2 transition-all duration-300 ease-in-out magnetic-target cursor-none rounded-full p-2 hover:scale-105"
           >
             <Dot />
-            <p className="text-xs text-white/50 tracking-tight">
+            <p className="text-xs text-white/50 tracking-tight lg:text-sm">
               Matthew Pandolfo
             </p>
           </Link>
@@ -41,6 +41,7 @@ function Navbar() {
             <Button
               size="xs"
               variant="outline"
+              className="lg:text-sm lg:h-7"
               onClick={() => router.push("/contact")}
             >
               Contact Me
