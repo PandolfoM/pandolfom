@@ -28,6 +28,7 @@ import Image from "next/image";
 import AppLink from "@/components/link";
 import { Spinner } from "@/components/ui/spinner";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   name: z.string().min(1, "Required"),
@@ -36,6 +37,7 @@ const formSchema = z.object({
 });
 
 function Contact() {
+  const router = useRouter();
   const [loading, setLoading] = useState<boolean>(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -68,12 +70,16 @@ function Contact() {
 
   return (
     <div className="pt-[172px] h-dvh">
-      <Card>
+      <Card className="lg:w-3/4 lg:m-auto">
         <CardHeader className="flex">
           <CardTitle>Contact</CardTitle>
         </CardHeader>
-        <CardContent>
-          <form id="contact-form" onSubmit={form.handleSubmit(onSubmit)}>
+        <CardContent className="lg:flex-row lg:flex lg:gap-10">
+          <form
+            id="contact-form"
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="lg:w-full"
+          >
             <FieldGroup>
               <Controller
                 name="name"
@@ -131,6 +137,38 @@ function Contact() {
               />
             </FieldGroup>
           </form>
+          <div>
+            <Separator className="" orientation="vertical" />
+          </div>
+          <div className="hidden items-center gap-5 w-7 flex-col lg:flex">
+            <AppLink href="mailto:matt@pandolfo.com" showArrow={false}>
+              <MailIcon className="expand-target" height="28" width="28" />
+            </AppLink>
+            <AppLink
+              className="text-white/50 text-sm"
+              href="https://github.com/pandolfom"
+              showArrow={false}
+            >
+              <Image
+                src={Github}
+                alt="github logo"
+                width="28"
+                className="invert expand-target"
+              />
+            </AppLink>
+            <AppLink
+              className="text-white/50 text-sm"
+              href="https://www.linkedin.com/in/matthew-pandolfo/"
+              showArrow={false}
+            >
+              <Image
+                src={Linkedin}
+                alt="linkedin logo"
+                width="28"
+                className="h-7 expand-target"
+              />
+            </AppLink>
+          </div>
         </CardContent>
         <CardFooter>
           <Field className="gap-5">
@@ -138,27 +176,40 @@ function Contact() {
               type="submit"
               form="contact-form"
               className="!w-fit"
-              disabled={loading}>
+              disabled={loading}
+            >
               {loading && <Spinner />}
               Send
             </Button>
-            <Separator className="!w-2/3 m-auto" />
-            <div className="flex items-center justify-center gap-5 h-7">
+            <Separator className="!w-2/3 m-auto lg:hidden" />
+            <div className="flex items-center justify-center gap-5 h-7 lg:hidden">
               <AppLink href="mailto:matt@pandolfo.com" showArrow={false}>
                 <MailIcon className="expand-target" height="28" width="28" />
               </AppLink>
-              <Image
-                src={Github}
-                alt="github logo"
-                width="28"
-                className="invert expand-target"
-              />
-              <Image
-                src={Linkedin}
-                alt="linkedin logo"
-                width="28"
-                className="h-full expand-target"
-              />
+              <AppLink
+                className="text-white/50 text-sm"
+                href="https://github.com/pandolfom"
+                showArrow={false}
+              >
+                <Image
+                  src={Github}
+                  alt="github logo"
+                  width="28"
+                  className="invert expand-target"
+                />
+              </AppLink>
+              <AppLink
+                className="text-white/50 text-sm"
+                href="https://www.linkedin.com/in/matthew-pandolfo/"
+                showArrow={false}
+              >
+                <Image
+                  src={Linkedin}
+                  alt="linkedin logo"
+                  width="28"
+                  className="h-full expand-target"
+                />
+              </AppLink>
             </div>
           </Field>
         </CardFooter>
