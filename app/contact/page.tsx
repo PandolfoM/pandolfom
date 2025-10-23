@@ -29,15 +29,16 @@ import AppLink from "@/components/link";
 import { Spinner } from "@/components/ui/spinner";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { Recaptcha } from "@/components/recaptcha";
 
 const formSchema = z.object({
   name: z.string().min(1, "Required"),
   email: z.email("Invalid email address"),
   message: z.string().min(1, "Required"),
+  recaptchaToken: z.string(),
 });
 
 function Contact() {
-  const router = useRouter();
   const [loading, setLoading] = useState<boolean>(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -45,21 +46,27 @@ function Contact() {
       name: "",
       email: "",
       message: "",
+      recaptchaToken: "",
     },
   });
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
       setLoading(true);
-      await fetch("/api/send", {
+      const res = await fetch("/api/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
-      form.reset();
-      toast.success("Message sent successfully!");
+
+      if (res.ok) {
+        form.reset();
+        toast.success("Message sent successfully!");
+      } else {
+        toast.error("Failed to send message. Please try again later.");
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Failed to send message. Please try again later.");
@@ -80,6 +87,11 @@ function Contact() {
             onSubmit={form.handleSubmit(onSubmit)}
             className="lg:w-full"
           >
+            <Recaptcha
+              action="contact_form"
+              register={form.register("recaptchaToken").ref}
+              setValue={form.setValue}
+            />
             <FieldGroup>
               <Controller
                 name="name"
