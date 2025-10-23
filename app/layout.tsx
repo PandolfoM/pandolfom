@@ -19,46 +19,46 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PandolfoM",
-  description: "Portfolio of Matthew Pandolfo",
-  // openGraph: {
-  //   title: "MJP Hub",
-  //   description: "Hub for MJP Web Solutions",
-  //   type: "website",
-  //   url: "https://mjphub.com",
-  //   siteName: "MJP Hub",
-  //   locale: "en_US",
-  //   images: [
-  //     {
-  //       url: "https://mjphub.com/og.png",
-  //       width: 1200,
-  //       height: 630,
-  //       alt: "MJP Web Solutions",
-  //     },
-  //   ],
-  // },
-  // twitter: {
-  //   title: "MJP Hub",
-  //   description: "Hub for MJP Web Solutions",
-  //   images: [
-  //     {
-  //       url: "https://mjphub.com/og.png",
-  //       width: 1200,
-  //       height: 630,
-  //       alt: "MJP Web Solutions",
-  //     },
-  //   ],
-  // },
-  // icons: {
-  //   icon: "/icon.ico",
-  //   apple: "/apple-icon.png",
-  // },
-  // applicationName: "MJP Hub",
-  // appleWebApp: {
-  //   title: "MJP Hub",
-  //   statusBarStyle: "default",
-  //   capable: true,
-  // },
+  title: "Matthew Pandolfo",
+  description: "Home of Matthew Pandolfo",
+  openGraph: {
+    title: "Matthew Pandolfo",
+    description: "Home of Matthew Pandolfo",
+    type: "website",
+    url: "https://mattpandolfo.com",
+    siteName: "Matthew Pandolfo",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://mattpandolfo.com/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Matthew Pandolfo",
+      },
+    ],
+  },
+  twitter: {
+    title: "MJP Hub",
+    description: "Home of Matthew Pandolfo",
+    images: [
+      {
+        url: "https://mattpandolfo.com/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Matthew Pandolfo",
+      },
+    ],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+  applicationName: "Matthew Pandolfo",
+  appleWebApp: {
+    title: "Matthew Pandolfo",
+    statusBarStyle: "default",
+    capable: true,
+  },
 };
 
 export const viewport: Viewport = {
@@ -78,9 +78,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="dark h-full px-4 max-w-[1200px] m-auto lg:pt-28 cursor-none scroll-smooth overflow-x-hidden">
+      className="dark h-full px-4 max-w-[1200px] m-auto lg:pt-28 cursor-none scroll-smooth overflow-x-hidden"
+    >
       <body
-        className={`${inter.variable} ${inter.className} ${jetBrainsMono.variable} antialiased h-full`}>
+        className={`${inter.variable} ${inter.className} ${jetBrainsMono.variable} antialiased h-full`}
+      >
         <MagneticCursor />
         <Navbar />
         {children}
