@@ -7,9 +7,6 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: Request) {
   const { name, email, message, recaptchaToken } = await req.json();
 
-  console.log("====================================");
-  console.log(process.env.NEXT_PUBLIC_RECAPTCHA_ID);
-  console.log("====================================");
   const recaptchaResponse = await fetch(
     `https://recaptchaenterprise.googleapis.com/v1/projects/mjp-web-solutions-476014/assessments?key=${process.env.GOOGLE_API_KEY}`,
     {

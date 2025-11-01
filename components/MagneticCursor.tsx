@@ -13,6 +13,7 @@ const MagneticCursor: React.FC = () => {
     "inactive"
   );
   const [isMobile, setIsMobile] = useState(false);
+  const [rounded, setRounded] = useState("rounded-full");
 
   useEffect(() => {
     // Basic mobile detection (user agent)
@@ -28,6 +29,7 @@ const MagneticCursor: React.FC = () => {
     };
     checkMobile();
   }, []);
+
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
   const cursorWidth = useMotionValue(32);
@@ -40,10 +42,10 @@ const MagneticCursor: React.FC = () => {
     stiffness: 2000,
     damping: 40,
   });
-  const springRadius = useSpring(cursorRadius, {
-    stiffness: 2000,
-    damping: 40,
-  });
+  // const springRadius = useSpring(cursorRadius, {
+  //   stiffness: 2000,
+  //   damping: 40,
+  // });
 
   useEffect(() => {
     if (isMobile) return;
@@ -62,6 +64,7 @@ const MagneticCursor: React.FC = () => {
         const rect = iconTarget.getBoundingClientRect();
         const newWidth = rect.width + 15;
         const newHeight = rect.height + 15;
+        setRounded(getRoundedClass(iconTarget as HTMLElement));
         cursorWidth.set(newWidth);
         cursorHeight.set(newHeight);
         cursorRadius.set(Math.max(newWidth, newHeight) / 2);
@@ -72,6 +75,7 @@ const MagneticCursor: React.FC = () => {
         const rect = target.getBoundingClientRect();
         cursorWidth.set(rect.width);
         cursorHeight.set(rect.height);
+        setRounded(getRoundedClass(target as HTMLElement));
         const computedRadius = window.getComputedStyle(target).borderRadius;
         let radiusValue = 0;
         if (computedRadius.endsWith("px")) {
@@ -93,6 +97,7 @@ const MagneticCursor: React.FC = () => {
         cursorRadius.set(16);
         mouseX.set(e.clientX - 16);
         mouseY.set(e.clientY - 16);
+        setRounded("rounded-full");
         setIsActive("inactive");
       }
     };
@@ -100,12 +105,20 @@ const MagneticCursor: React.FC = () => {
     return () => window.removeEventListener("mousemove", moveCursor);
   }, [cursorHeight, cursorRadius, cursorWidth, mouseX, mouseY, isMobile]);
 
+  const getRoundedClass = (el: HTMLElement | null): string => {
+    if (!el) return "rounded-full";
+    const classList = Array.from(el.classList);
+    const rounded = classList.find((cls) => cls.startsWith("rounded"));
+    return rounded || "rounded-full";
+  };
+
   if (isMobile) return null;
   return (
     <motion.div
       ref={cursorRef}
       className={cn(
         "fixed top-0 left-0 pointer-events-none z-[999999999999999] transition-all transform-[-50%, -50%] border-2 border-solid",
+        rounded,
         isActive === "expand"
           ? "bg-accent/30 border-accent"
           : isActive === "active"
@@ -117,7 +130,7 @@ const MagneticCursor: React.FC = () => {
         y: springY,
         width: springWidth,
         height: springHeight,
-        borderRadius: springRadius,
+        // borderRadius: springRadius,
         transition: "background 0.2s, border 0.2s",
       }}
     />
