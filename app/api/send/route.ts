@@ -8,16 +8,17 @@ export async function POST(req: Request) {
   const { name, email, message, recaptchaToken } = await req.json();
 
   const recaptchaResponse = await fetch(
-    `https://recaptchaenterprise.googleapis.com/v1/projects/mjp-web-solutions-476014/assessments?key=${process.env.GOOGLE_API_KEY}`,
+    `https://recaptchaenterprise.googleapis.com/v1/projects/mjp-web-solutions/assessments?key=${process.env.GOOGLE_API_KEY}`,
     {
       method: "POST",
       body: JSON.stringify({
         event: {
           token: recaptchaToken,
-          siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_ID,
           expectedAction: "contact_form",
+          siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_ID,
         },
       }),
+      headers: { "Content-Type": "application/json" },
     }
   );
   const recaptchaData = await recaptchaResponse.json();
