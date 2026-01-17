@@ -1,0 +1,44 @@
+{
+  "about": "Hey, I'm Matt! I'm a web developer from Rocky Hill, CT who loves building modern, user-friendly websites and experimenting with the latest tools and technologies. I'm passionate about creating meaningful digital experiences that blend creativity, functionality, and great design.",
+  "experience": [
+    {
+      "role": "Frontend Developer",
+      "company": "Avid Marketing Group",
+      "location": "Rocky Hill, Connecticut",
+      "endYear": null
+    },
+    {
+      "role": "Cashier",
+      "company": "West Side Marketplace",
+      "location": "Rocky Hill, Connecticut",
+      "endYear": "2023"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Maneeley's",
+      "description": "An updated site for a wedding venue company called Maneeley's",
+      "link": "https://maneeleys.com/"
+    },
+    {
+      "name": "Heena Kapadia",
+      "description": "A modern website for a law office specializing in employee rights.",
+      "link": "https://heenakapadialaw.com/"
+    },
+    {
+      "name": "Tipity",
+      "description": "Tipity is an easily accessible app to calculate your tip and split a bill in seconds.",
+      "link": "https://apps.apple.com/us/app/tipity-tip-calculator/id6444921554"
+    },
+    {
+      "name": "MJP Systems",
+      "description": "MJP Systems is a technology consulting company that provides IT services and solutions to businesses of all sizes.",
+      "link": "https://mjpsystems.com/"
+    },
+    {
+      "name": "MJP Web Solutions",
+      "description": "MJP Web Solutions is a technology consulting company that provides IT services and solutions to businesses of all sizes.",
+      "link": "https://mjpwebsolutions.com/"
+    }
+  ]
+}
