@@ -8,8 +8,10 @@ I'm a Full-Stack Developer who loves creating high-quality websites and applicat
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)![Shadcn/ui](https://img.shields.io/badge/shadcn/ui-%23000000?style=for-the-badge&logo=shadcnui&logoColor=white)
 
-## Stats
+<!-- ## Stats -->
 
 <!-- ![PandolfoM's Github Stats](https://github-readme-stats.vercel.app/api?username=pandolfom&show_icons=true&theme=dracula) -->
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pandolfom&show_icons=true&theme=dracula&layout=donut)
+<!-- ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pandolfom&show_icons=true&theme=dracula&layout=donut) -->
+
+<a href="https://app.daily.dev/pandolfom"><img src="https://api.daily.dev/devcards/v2/dNZi6772IBpAJZHuFYWKV.png?type=default&r=3m8" width="356" alt="Matthew Pandolfo's Dev Card"/></a>
