@@ -1,29 +1,36 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import MagneticCursor from "@/components/MagneticCursor";
 import Footer from "@/components/footer";
+import SmoothScroll from "@/components/smooth-scroll";
 import { Toaster } from "@/components/ui/sonner";
 
-const inter = Inter({
-  variable: "--font-inter",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  style: ["normal", "italic"],
+});
+
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
+  subsets: ["latin"],
 });
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Matthew Pandolfo",
-  description: "Home of Matthew Pandolfo",
+  title: "Matthew Pandolfo — Frontend Developer",
+  description:
+    "Frontend developer based in Rocky Hill, CT, crafting fast, beautiful things for the web.",
   openGraph: {
-    title: "Matthew Pandolfo",
-    description: "Home of Matthew Pandolfo",
+    title: "Matthew Pandolfo — Frontend Developer",
+    description:
+      "Frontend developer based in Rocky Hill, CT, crafting fast, beautiful things for the web.",
     type: "website",
     url: "https://mattpandolfo.com",
     siteName: "Matthew Pandolfo",
@@ -38,8 +45,9 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "MJP Hub",
-    description: "Home of Matthew Pandolfo",
+    title: "Matthew Pandolfo — Frontend Developer",
+    description:
+      "Frontend developer based in Rocky Hill, CT, crafting fast, beautiful things for the web.",
     images: [
       {
         url: "https://mattpandolfo.com/og.png",
@@ -62,7 +70,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#0c0b0b",
   colorScheme: "dark",
   maximumScale: 1,
   initialScale: 1,
@@ -76,16 +84,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className="dark h-full px-4 max-w-[1200px] m-auto lg:pt-28 cursor-none scroll-smooth overflow-x-hidden"
-    >
+    <html lang="en" className="dark cursor-none overflow-x-clip">
       <body
-        className={`${inter.variable} ${inter.className} ${jetBrainsMono.variable} antialiased h-full`}
+        className={`${fraunces.variable} ${instrumentSans.variable} ${jetBrainsMono.variable} font-sans antialiased min-h-svh flex flex-col`}
       >
+        <SmoothScroll />
         <MagneticCursor />
+        <div className="noise" aria-hidden />
         <Navbar />
-        {children}
+        <main className="mx-auto w-full max-w-[1200px] flex-1 px-4 md:px-6">
+          {children}
+        </main>
         <Footer />
         <Toaster />
       </body>

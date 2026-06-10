@@ -1,15 +1,16 @@
 "use client";
 
 import Hero from "@/components/hero";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Reveal from "@/components/reveal";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import AppLink from "@/components/link";
+import { Skeleton } from "@/components/ui/skeleton";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import me from "@/app/assets/me.png";
 import backupData from "@/app/assets/data.json";
-import { Skeleton } from "@/components/ui/skeleton";
 
 type DataProps = {
   about: string;
@@ -25,6 +26,20 @@ type DataProps = {
     link: string;
   }>;
 };
+
+function SectionHeading({ index, title }: { index: string; title: string }) {
+  return (
+    <Reveal>
+      <div className="mb-12 flex items-center gap-5 md:mb-16">
+        <span className="font-mono text-sm text-accent">{index}</span>
+        <h2 className="font-display text-3xl font-medium tracking-tight md:text-5xl">
+          {title}
+        </h2>
+        <div className="h-px flex-1 bg-white/10" />
+      </div>
+    </Reveal>
+  );
+}
 
 export default function Home() {
   const [data, setData] = useState<DataProps | null>(null);
@@ -47,276 +62,178 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="flex flex-col gap-20">
-      <div className="flex flex-col h-dvh gap-5 pt-[172px]">
-        <Hero />
-      </div>
-      <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-        {/* Experience */}
-        <div className="relative lg:row-span-2">
-          <Card id="experience" className="h-full">
-            <CardHeader className="flex items-center">
-              <CardTitle className="flex items-center">Experience</CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-col gap-6">
-              {data ? (
-                <>
-                  {data.experience.map((exp, i) => (
-                    <div className="grid grid-cols-3 gap-3" key={i}>
-                      {exp.endYear ? (
-                        <p className="text-sm text-white/50">{exp.endYear}</p>
-                      ) : (
-                        <Badge>Present</Badge>
-                      )}
+    <div className="flex flex-col gap-28 md:gap-40">
+      <Hero />
 
-                      <div className="col-span-2">
-                        <p>{exp.role}</p>
-                        <p>{exp.company}</p>
-                        <p className="opacity-50">{exp.location}</p>
-                      </div>
-                    </div>
-                  ))}
-                </>
-              ) : (
-                <div className="grid grid-cols-3 gap-3">
-                  <Skeleton className="h-[20px] rounded-full" />
-
-                  <div className="col-span-2 space-y-2">
-                    <Skeleton className="h-[20px] rounded-full" />
-                    <Skeleton className="h-[20px] rounded-full" />
-                    <Skeleton className="h-[20px] rounded-full" />
-                  </div>
-                  <Skeleton className="h-[20px] rounded-full" />
-
-                  <div className="col-span-2 space-y-2">
-                    <Skeleton className="h-[20px] rounded-full" />
-                    <Skeleton className="h-[20px] rounded-full" />
-                    <Skeleton className="h-[20px] rounded-full" />
-                  </div>
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* About */}
-        <div className="relative max-lg:row-start-1">
-          <Card id="about" className="h-full">
-            <CardHeader className="flex items-center">
-              <CardTitle className="flex items-center gap-2.5">
-                <Image src={me} alt="matthew pandolfo" width={40} />
-                About
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              {data ? (
-                <p>{data?.about}</p>
-              ) : (
-                <div className="space-y-2">
-                  <Skeleton className="h-[20px] w-full rounded-full" />
-                  <Skeleton className="h-[20px] w-full rounded-full" />
-                  <Skeleton className="h-[20px] w-full rounded-full" />
-                  <Skeleton className="h-[20px] w-full rounded-full" />
-                  <Skeleton className="h-[20px] w-full rounded-full" />
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Contact */}
-        <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-          <Card id="contact" className="h-full">
-            <CardHeader className="flex items-center">
-              <CardTitle className="flex items-center">Contact</CardTitle>
-            </CardHeader>
-            <CardContent className="grid grid-cols-2 grid-rows-2 gap-y-6">
-              <div className="flex flex-col gap-1">
-                <AppLink href="/matthew-pandolfo.pdf">Resume</AppLink>
-                <p className="text-white/50">View my resume</p>
+      {/* About */}
+      <section id="about" className="scroll-mt-28">
+        <SectionHeading index="01" title="About" />
+        <div className="grid gap-10 md:grid-cols-[auto_1fr] md:gap-16">
+          <Reveal delay={0.1}>
+            <div className="flex items-start gap-5 md:flex-col">
+              <div className="group relative w-24 shrink-0 md:w-40">
+                <div className="absolute -inset-2 rounded-2xl border border-accent/30 transition-transform duration-500 group-hover:rotate-3" />
+                <Image
+                  src={me}
+                  alt="Matthew Pandolfo"
+                  className="relative w-full rounded-xl transition-transform duration-500 group-hover:-rotate-2"
+                />
               </div>
-              <div className="flex flex-col gap-1">
-                <AppLink href="https://www.linkedin.com/in/matthew-pandolfo/">
-                  LinkedIn
-                </AppLink>
-                <p className="text-white/50">Connect with me</p>
-              </div>
-              <div className="flex flex-col gap-1">
-                <AppLink href="/contact" target="_self">
-                  Contact
-                </AppLink>
-                <p className="text-white/50">Get in touch</p>
-              </div>
-              <div className="flex flex-col gap-1">
-                <AppLink href="https://github.com/PandolfoM">GitHub</AppLink>
-                <p className="text-white/50">Explore my work</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Projects */}
-        <div className="relative lg:row-span-2">
-          <Card id="projects" className="h-full">
-            <CardHeader className="flex items-center">
-              <CardTitle className="flex items-center">Projects</CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-col gap-6">
-              {data ? (
-                <>
-                  {data.projects.map((proj, i) => (
-                    <div className="flex flex-col gap-1" key={i}>
-                      <AppLink href={proj.link}>{proj.name}</AppLink>
-                      <p className="text-white/50">{proj.description}</p>
-                    </div>
-                  ))}
-                </>
-              ) : (
-                <>
-                  <div className="space-y-2">
-                    <Skeleton className="h-[20px] w-1/3 rounded-full" />
-                    <Skeleton className="h-[20px] rounded-full" />
-                    <Skeleton className="h-[20px] rounded-full" />
-                  </div>
-                  <div className="space-y-2">
-                    <Skeleton className="h-[20px] w-1/3 rounded-full" />
-                    <Skeleton className="h-[20px] rounded-full" />
-                    <Skeleton className="h-[20px] rounded-full" />
-                  </div>
-                </>
-              )}
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-
-      {/* Flex layout incase it is needed in the future */}
-      {/* <section className="flex flex-col gap-8">
-        <Card id="about">
-          <CardHeader className="flex items-center">
-            <CardTitle className="flex items-center gap-2.5">
-              <Image src={me} alt="matthew pandolfo" width={40} />
-              About
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/40 md:mt-2">
+                Matt Pandolfo
+                <br />
+                Rocky Hill, CT
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.2}>
             {data ? (
-              <p>{data?.about}</p>
+              <p className="max-w-[42ch] text-xl leading-relaxed text-white/80 md:text-2xl">
+                {data.about}
+              </p>
             ) : (
-              <div className="space-y-2">
-                <Skeleton className="h-[20px] w-full rounded-full" />
-                <Skeleton className="h-[20px] w-full rounded-full" />
-                <Skeleton className="h-[20px] w-full rounded-full" />
-                <Skeleton className="h-[20px] w-full rounded-full" />
-                <Skeleton className="h-[20px] w-full rounded-full" />
+              <div className="space-y-3">
+                <Skeleton className="h-6 w-full rounded-full" />
+                <Skeleton className="h-6 w-full rounded-full" />
+                <Skeleton className="h-6 w-5/6 rounded-full" />
+                <Skeleton className="h-6 w-2/3 rounded-full" />
               </div>
             )}
-          </CardContent>
-        </Card>
+          </Reveal>
+        </div>
+      </section>
 
-        <Card id="experience">
-          <CardHeader className="flex items-center">
-            <CardTitle className="flex items-center">Experience</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-6">
-            {data ? (
-              <>
-                {data.experience.map((exp, i) => (
-                  <div className="grid grid-cols-3 gap-3" key={i}>
+      {/* Experience */}
+      <section id="experience" className="scroll-mt-28">
+        <SectionHeading index="02" title="Experience" />
+        <div className="relative ml-1 flex flex-col gap-12 border-l border-white/10 pl-8 md:pl-12">
+          {data ? (
+            data.experience.map((exp, i) => (
+              <Reveal key={i} delay={i * 0.1}>
+                <div className="relative">
+                  <span
+                    className={`absolute -left-[37px] top-1.5 size-2.5 rounded-full md:-left-[53px] ${
+                      exp.endYear ? "bg-white/20" : "bg-accent"
+                    }`}
+                  />
+                  <div className="flex flex-col gap-1">
                     {exp.endYear ? (
-                      <p className="text-sm text-white/50">{exp.endYear}</p>
+                      <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/40">
+                        — {exp.endYear}
+                      </p>
                     ) : (
-                      <Badge>Present</Badge>
+                      <Badge className="font-mono text-[10px] uppercase tracking-[0.15em]">
+                        Present
+                      </Badge>
                     )}
-
-                    <div className="col-span-2">
-                      <p>{exp.role}</p>
-                      <p>{exp.company}</p>
-                      <p className="opacity-50">{exp.location}</p>
-                    </div>
+                    <h3 className="mt-2 font-display text-2xl font-medium tracking-tight">
+                      {exp.role}
+                    </h3>
+                    <p className="text-white/70">{exp.company}</p>
+                    <p className="text-sm text-white/40">{exp.location}</p>
                   </div>
-                ))}
-              </>
-            ) : (
-              <div className="grid grid-cols-3 gap-3">
-                <Skeleton className="h-[20px] rounded-full" />
-
-                <div className="col-span-2 space-y-2">
-                  <Skeleton className="h-[20px] rounded-full" />
-                  <Skeleton className="h-[20px] rounded-full" />
-                  <Skeleton className="h-[20px] rounded-full" />
                 </div>
-                <Skeleton className="h-[20px] rounded-full" />
+              </Reveal>
+            ))
+          ) : (
+            <div className="space-y-4">
+              <Skeleton className="h-5 w-24 rounded-full" />
+              <Skeleton className="h-7 w-64 rounded-full" />
+              <Skeleton className="h-5 w-48 rounded-full" />
+              <Skeleton className="h-5 w-40 rounded-full" />
+            </div>
+          )}
+        </div>
+      </section>
 
-                <div className="col-span-2 space-y-2">
-                  <Skeleton className="h-[20px] rounded-full" />
-                  <Skeleton className="h-[20px] rounded-full" />
-                  <Skeleton className="h-[20px] rounded-full" />
-                </div>
-              </div>
-            )}
-          </CardContent>
-        </Card>
+      {/* Projects */}
+      <section id="projects" className="scroll-mt-28">
+        <SectionHeading index="03" title="Projects" />
+        <div className="flex flex-col border-t border-white/10">
+          {data ? (
+            data.projects.map((proj, i) => (
+              <Reveal key={i} delay={i * 0.06}>
+                <Link
+                  href={proj.link}
+                  target="_blank"
+                  className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-4 border-b border-white/10 py-7 transition-all duration-300 hover:border-accent/50 hover:pl-3 expand-target cursor-none md:py-9"
+                >
+                  <span className="font-mono text-sm text-white/30 transition-colors duration-300 group-hover:text-accent">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="flex flex-col gap-1.5">
+                    <span className="font-display text-2xl font-medium tracking-tight transition-colors duration-300 group-hover:text-accent md:text-3xl">
+                      {proj.name}
+                    </span>
+                    <span className="max-w-[55ch] text-sm leading-relaxed text-white/40 md:text-base">
+                      {proj.description}
+                    </span>
+                  </span>
+                  <ArrowUpRight
+                    size={22}
+                    className="self-center text-white/30 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent"
+                  />
+                </Link>
+              </Reveal>
+            ))
+          ) : (
+            <div className="space-y-4 py-8">
+              <Skeleton className="h-8 w-1/3 rounded-full" />
+              <Skeleton className="h-5 w-2/3 rounded-full" />
+              <Skeleton className="h-8 w-1/3 rounded-full" />
+              <Skeleton className="h-5 w-2/3 rounded-full" />
+            </div>
+          )}
+        </div>
+      </section>
 
-        <Card id="projects">
-          <CardHeader className="flex items-center">
-            <CardTitle className="flex items-center">Projects</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-6">
-            {data ? (
-              <>
-                {data.projects.map((proj, i) => (
-                  <div className="flex flex-col gap-1" key={i}>
-                    <AppLink href={proj.link}>{proj.name}</AppLink>
-                    <p className="text-white/50">{proj.description}</p>
-                  </div>
-                ))}
-              </>
-            ) : (
-              <>
-                <div className="space-y-2">
-                  <Skeleton className="h-[20px] w-1/3 rounded-full" />
-                  <Skeleton className="h-[20px] rounded-full" />
-                  <Skeleton className="h-[20px] rounded-full" />
-                </div>
-                <div className="space-y-2">
-                  <Skeleton className="h-[20px] w-1/3 rounded-full" />
-                  <Skeleton className="h-[20px] rounded-full" />
-                  <Skeleton className="h-[20px] rounded-full" />
-                </div>
-              </>
-            )}
-          </CardContent>
-        </Card>
-
-        <Card id="contact">
-          <CardHeader className="flex items-center">
-            <CardTitle className="flex items-center">Contact</CardTitle>
-          </CardHeader>
-          <CardContent className="grid grid-cols-2 grid-rows-2 gap-y-6">
-            <div className="flex flex-col gap-1">
-              <AppLink href="/matthew-pandolfo.pdf">Resume</AppLink>
-              <p className="text-white/50">View my resume</p>
-            </div>
-            <div className="flex flex-col gap-1">
-              <AppLink href="https://www.linkedin.com/in/matthew-pandolfo/">
-                LinkedIn
-              </AppLink>
-              <p className="text-white/50">Connect with me</p>
-            </div>
-            <div className="flex flex-col gap-1">
-              <AppLink href="/contact" target="_self">
-                Contact
-              </AppLink>
-              <p className="text-white/50">Get in touch</p>
-            </div>
-            <div className="flex flex-col gap-1">
-              <AppLink href="https://github.com/PandolfoM">GitHub</AppLink>
-              <p className="text-white/50">Explore my work</p>
-            </div>
-          </CardContent>
-        </Card>
-      </section> */}
-    </section>
+      {/* Contact */}
+      <section id="contact" className="scroll-mt-28 pb-12 text-center md:pb-20">
+        <Reveal>
+          <p className="font-mono text-xs uppercase tracking-[0.3em] text-white/40">
+            <span className="text-accent">●</span> What&apos;s next?
+          </p>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <h2 className="mx-auto mt-6 max-w-[16ch] font-display text-4xl font-medium leading-[1.1] tracking-tight md:text-6xl">
+            Let&apos;s build something{" "}
+            <em className="font-light italic text-accent">together</em>.
+          </h2>
+        </Reveal>
+        <Reveal delay={0.2}>
+          <p className="mx-auto mt-6 max-w-[48ch] text-white/50">
+            Have a project in mind, a role to fill, or just want to say hi? My
+            inbox is always open.
+          </p>
+        </Reveal>
+        <Reveal delay={0.3}>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+            <Link
+              href="/contact"
+              className="link-underline expand-target cursor-none font-display text-xl italic text-accent md:text-2xl"
+            >
+              Get in touch
+            </Link>
+            {[
+              { label: "Resume", href: "/matthew-pandolfo.pdf" },
+              {
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/in/matthew-pandolfo/",
+              },
+              { label: "GitHub", href: "https://github.com/PandolfoM" },
+            ].map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                className="link-underline expand-target cursor-none font-mono text-xs uppercase tracking-[0.2em] text-white/50 transition-colors hover:text-white"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+    </div>
   );
 }

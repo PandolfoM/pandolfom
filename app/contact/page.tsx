@@ -1,13 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Reveal from "@/components/reveal";
 import {
   Field,
   FieldError,
@@ -21,14 +16,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { MailIcon } from "lucide-react";
 import Github from "@/app/assets/github.svg";
 import Linkedin from "@/app/assets/linkedin.png";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
 import Image from "next/image";
 import AppLink from "@/components/link";
 import { Spinner } from "@/components/ui/spinner";
 import { toast } from "sonner";
-import { useRouter } from "next/navigation";
 import { Recaptcha } from "@/components/recaptcha";
 
 const formSchema = z.object({
@@ -76,11 +70,19 @@ function Contact() {
   };
 
   return (
-    <div className="pt-[172px] h-dvh">
+    <div className="flex min-h-svh flex-col justify-center gap-10 py-32">
+      <Reveal>
+        <div className="lg:w-3/4 lg:m-auto">
+          <p className="font-mono text-xs uppercase tracking-[0.3em] text-white/40">
+            <span className="text-accent">●</span> Contact
+          </p>
+          <h1 className="mt-4 font-display text-4xl font-medium tracking-tight md:text-5xl">
+            Say <em className="font-light italic text-accent">hello</em>.
+          </h1>
+        </div>
+      </Reveal>
+      <Reveal delay={0.15}>
       <Card className="lg:w-3/4 lg:m-auto">
-        <CardHeader className="flex">
-          <CardTitle>Contact</CardTitle>
-        </CardHeader>
         <CardContent className="lg:flex-row lg:flex lg:gap-10">
           <form
             id="contact-form"
@@ -226,6 +228,7 @@ function Contact() {
           </Field>
         </CardFooter>
       </Card>
+      </Reveal>
     </div>
   );
 }

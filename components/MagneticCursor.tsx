@@ -7,6 +7,13 @@ import { cn } from "@/lib/utils";
 const MAGNETIC_SELECTORS = [".magnetic-target"];
 const ICON_SELECTORS = [".expand-target"];
 
+const getRoundedClass = (el: HTMLElement | null): string => {
+  if (!el) return "rounded-full";
+  const classList = Array.from(el.classList);
+  const rounded = classList.find((cls) => cls.startsWith("rounded"));
+  return rounded || "rounded-full";
+};
+
 const MagneticCursor: React.FC = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isActive, setIsActive] = useState<"expand" | "active" | "inactive">(
@@ -104,13 +111,6 @@ const MagneticCursor: React.FC = () => {
     window.addEventListener("mousemove", moveCursor);
     return () => window.removeEventListener("mousemove", moveCursor);
   }, [cursorHeight, cursorRadius, cursorWidth, mouseX, mouseY, isMobile]);
-
-  const getRoundedClass = (el: HTMLElement | null): string => {
-    if (!el) return "rounded-full";
-    const classList = Array.from(el.classList);
-    const rounded = classList.find((cls) => cls.startsWith("rounded"));
-    return rounded || "rounded-full";
-  };
 
   if (isMobile) return null;
   return (

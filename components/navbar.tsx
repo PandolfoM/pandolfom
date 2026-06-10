@@ -8,6 +8,13 @@ import Dot from "@/components/dot";
 import AppLink from "./link";
 import { useRouter } from "next/navigation";
 
+const NAV_LINKS = [
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Contact", href: "/#contact" },
+];
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -16,13 +23,13 @@ function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-1/2 z-10 flex justify-center w-full pt-4 px-4 overscroll-contain -translate-x-1/2 max-w-[1200px]",
+        "fixed top-0 left-1/2 z-50 flex justify-center w-full pt-4 px-4 overscroll-contain -translate-x-1/2 max-w-[1200px]",
         isOpen && "min-h-screen max-h-screen pb-6"
       )}
     >
       <div
         className={cn(
-          "flex flex-col gap-4 items-start w-full h-16 p-4 overflow-hidden bg-gradient-to-t from-[rgba(9,9,9,0.7)] to-[rgba(17,17,17,0.9)] backdrop-blur-sm border border-[hsla(0,0%,100%,.06)] rounded-2xl shadow-navbar transition-[height] duration-300 ease-in-out will-change-auto lg:h-20 lg:justify-center",
+          "flex flex-col gap-4 items-start w-full h-16 p-4 overflow-hidden bg-gradient-to-t from-[rgba(9,9,9,0.75)] to-[rgba(17,17,17,0.9)] backdrop-blur-md border border-white/[0.07] rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.35)] transition-[height] duration-300 ease-in-out will-change-auto lg:h-[72px] lg:justify-center",
           isOpen && "h-64"
         )}
       >
@@ -31,11 +38,24 @@ function Navbar() {
             href="/"
             className="flex text-sm items-center gap-2 transition-all duration-300 ease-in-out magnetic-target cursor-none rounded-full p-2 hover:scale-105"
           >
-            <Dot />
+            <Dot className="animate-pulse-dot" />
             <p className="text-xs text-white/50 tracking-tight lg:text-sm">
               Matthew Pandolfo
             </p>
           </Link>
+
+          {/* desktop links */}
+          <div className="hidden items-center gap-1 lg:flex">
+            {NAV_LINKS.slice(0, 3).map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="expand-target cursor-none rounded-full px-3 py-1.5 font-mono text-xs uppercase tracking-[0.15em] text-white/50 transition-colors duration-300 hover:text-white"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
 
           <div className="flex items-center gap-2">
             <Button
@@ -75,39 +95,19 @@ function Navbar() {
             </div>
           </div>
         </div>
+
+        {/* mobile menu */}
         <div className="grid grid-cols-2 grid-rows-4 grid-flow-col gap-5 w-full select-none p-2 lg:hidden">
-          <Button
-            size="xs"
-            variant="link"
-            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1"
-            onClick={() => router.push("/#about")}
-          >
-            About
-          </Button>
-          <Button
-            size="xs"
-            variant="link"
-            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1"
-            onClick={() => router.push("/#experience")}
-          >
-            Experience
-          </Button>
-          <Button
-            size="xs"
-            variant="link"
-            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1"
-            onClick={() => router.push("/#projects")}
-          >
-            Projects
-          </Button>
-          <Button
-            size="xs"
-            variant="link"
-            className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1"
-            onClick={() => router.push("/#contact")}
-          >
-            Contact
-          </Button>
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="text-sm text-white/50 expand-target cursor-none w-fit flex items-center gap-1"
+            >
+              {link.label}
+            </a>
+          ))}
           <AppLink
             className="text-white/50 text-sm"
             href="/matthew-pandolfo.pdf"
