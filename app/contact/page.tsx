@@ -16,43 +16,56 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { MailIcon } from "lucide-react";
 import Github from "@/app/assets/github.svg";
 import Linkedin from "@/app/assets/linkedin.png";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
 import Image from "next/image";
 import AppLink from "@/components/link";
 import { Spinner } from "@/components/ui/spinner";
 import { toast } from "sonner";
-import { Recaptcha } from "@/components/recaptcha";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
+import { sendEmail } from "@/lib/send-email";
 
 const formSchema = z.object({
   name: z.string().min(1, "Required"),
   email: z.email("Invalid email address"),
   message: z.string().min(1, "Required"),
-  recaptchaToken: z.string(),
 });
 
 function Contact() {
   const [loading, setLoading] = useState<boolean>(false);
+  const [captchaToken, setCaptchaToken] = useState<string>("");
+  const turnstile = useRef<TurnstileInstance>(null);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
       message: "",
-      recaptchaToken: "",
     },
   });
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    if (!captchaToken) {
+      toast.error("Please wait for the captcha check to finish.");
+      return;
+    }
     try {
       setLoading(true);
-      const res = await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      // Sent through MJP Hub, which checks the Turnstile token.
+      const res = await sendEmail({
+        from: "Portfolio",
+        to: "matt@pandolfo.com",
+        subject: "Contact Form Submission",
+        emailProps: {
+          Name: data.name,
+          Email: data.email,
+          Message: data.message,
         },
-        body: JSON.stringify(data),
+        text: `Name: ${data.name}
+Email: ${data.email}
+Message: ${data.message}`,
+        captchaToken,
       });
 
       if (res.ok) {
@@ -65,6 +78,9 @@ function Contact() {
       console.error("Error submitting form:", error);
       toast.error("Failed to send message. Please try again later.");
     } finally {
+      // Tokens work once; get a fresh one for the next message.
+      setCaptchaToken("");
+      turnstile.current?.reset();
       setLoading(false);
     }
   };
@@ -89,11 +105,6 @@ function Contact() {
             onSubmit={form.handleSubmit(onSubmit)}
             className="lg:w-full"
           >
-            <Recaptcha
-              action="contact_form"
-              register={form.register("recaptchaToken").ref}
-              setValue={form.setValue}
-            />
             <FieldGroup>
               <Controller
                 name="name"
@@ -148,6 +159,14 @@ function Contact() {
                     )}
                   </Field>
                 )}
+              />
+              <Turnstile
+                ref={turnstile}
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                onSuccess={setCaptchaToken}
+                onExpire={() => setCaptchaToken("")}
+                onError={() => setCaptchaToken("")}
+                options={{ theme: "dark" }}
               />
             </FieldGroup>
           </form>
